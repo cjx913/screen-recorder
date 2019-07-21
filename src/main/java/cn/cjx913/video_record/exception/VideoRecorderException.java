@@ -1,4 +1,4 @@
-package com.efunds.atms.video_record.exception;
+package cn.cjx913.video_record.exception;
 
 public class VideoRecorderException extends RuntimeException {
     public VideoRecorderException() {

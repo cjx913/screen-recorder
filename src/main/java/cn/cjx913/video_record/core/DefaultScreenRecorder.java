@@ -1,8 +1,6 @@
-package com.efunds.atms.video_record.core;
+package cn.cjx913.video_record.core;
 
-import com.efunds.atms.video_record.exception.ScreenRecorderException;
-import lombok.Getter;
-import lombok.Setter;
+import cn.cjx913.video_record.exception.ScreenRecorderException;
 import org.bytedeco.javacpp.avcodec;
 import org.bytedeco.javacpp.avutil;
 import org.bytedeco.javacpp.opencv_core;

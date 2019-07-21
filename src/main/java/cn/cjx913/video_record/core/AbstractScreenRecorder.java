@@ -1,7 +1,7 @@
-package com.efunds.atms.video_record.core;
+package cn.cjx913.video_record.core;
 
-import com.efunds.atms.video_record.exception.ScreenRecorderException;
-import com.efunds.atms.video_record.util.FrameRecorderUtil;
+import cn.cjx913.video_record.exception.ScreenRecorderException;
+import cn.cjx913.video_record.util.FrameRecorderUtil;
 import lombok.Getter;
 import lombok.Setter;
 import org.bytedeco.javacv.FrameRecorder;
@@ -85,7 +85,6 @@ public abstract class AbstractScreenRecorder implements ScreenRecorder {
                 screenRecorderRunnable.setStatus(ScreenRecorderRunnable.ScreenRecorderRunnableStatus.PLAYING);
                 screenRecorderRunnable.setGoOnTime(System.currentTimeMillis());
                 screenRecorderRunnable.setTotalPauseTime(screenRecorderRunnable.getTotalPauseTime()+(screenRecorderRunnable.getGoOnTime()-screenRecorderRunnable.getPauseTime()));
-//                FrameRecorderUtil.start(screenRecorderRunnable.getFrameRecorder());
             }
         }
     }

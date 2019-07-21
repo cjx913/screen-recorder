@@ -1,6 +1,6 @@
-package com.efunds.atms.video_record.util;
+package cn.cjx913.video_record.util;
 
-import com.efunds.atms.video_record.exception.FrameRecorderUtilException;
+import cn.cjx913.video_record.exception.FrameRecorderUtilException;
 import org.bytedeco.javacv.FrameRecorder;
 
 public class FrameRecorderUtil {

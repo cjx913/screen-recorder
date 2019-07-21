@@ -1,4 +1,4 @@
-package com.efunds.atms.video_record.core;
+package cn.cjx913.video_record.core;
 
 public class Demo {
     public static void main(String[] args) {
