@@ -7,9 +7,17 @@ public class Demo {
         screenRecorder.start();
         sleep(10,"start");
         screenRecorder.pause();
-        sleep(10,"pause");
+        sleep(10,"pause1");
         screenRecorder.goOn();
-        sleep(8,"goOn");
+        sleep(8,"goOn1");
+        screenRecorder.pause();
+        sleep(5,"pause2");
+        screenRecorder.goOn();
+        sleep(8,"goOn2");
+        screenRecorder.pause();
+        sleep(7,"pause3");
+        screenRecorder.goOn();
+        sleep(10,"goOn3");
         screenRecorder.stop();
     }
 

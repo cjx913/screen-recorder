@@ -34,9 +34,10 @@ public abstract class AbstractScreenRecorder implements ScreenRecorder {
         if (ScreenRecorderRunnable.ScreenRecorderRunnableStatus.STOP.equals(screenRecorderRunnable.getStatus())) {
             //记录开始时间
             screenRecorderRunnable.setStartTime(System.currentTimeMillis());
-            screenRecorderRunnable.setPauseTime(0);
-            screenRecorderRunnable.setGoOnTime(0);
-            screenRecorderRunnable.setStopTime(0);
+            screenRecorderRunnable.setPauseTime(0L);
+            screenRecorderRunnable.setGoOnTime(0L);
+            screenRecorderRunnable.setStopTime(0L);
+            screenRecorderRunnable.setTotalPauseTime(0L);
             //设置任务状态
             screenRecorderRunnable.setStatus(ScreenRecorderRunnable.ScreenRecorderRunnableStatus.PLAYING);
             //frameRecorder设置启动
@@ -64,6 +65,7 @@ public abstract class AbstractScreenRecorder implements ScreenRecorder {
             if (!videoExecutor.isShutdown()) {
                 screenRecorderRunnable.setStatus(ScreenRecorderRunnable.ScreenRecorderRunnableStatus.PLAYING);
                 screenRecorderRunnable.setGoOnTime(System.currentTimeMillis());
+                screenRecorderRunnable.setTotalPauseTime(screenRecorderRunnable.getTotalPauseTime()+(screenRecorderRunnable.getGoOnTime()-screenRecorderRunnable.getPauseTime()));
 //                FrameRecorderUtil.start(screenRecorderRunnable.getFrameRecorder());
             }
         }

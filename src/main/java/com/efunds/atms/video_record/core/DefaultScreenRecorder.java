@@ -76,8 +76,6 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
         BufferedImage cursor;
         private OpenCVFrameConverter.ToIplImage conveter;
 
-        private long offset = 0L;
-
         {
             try {
                 robot = new Robot();
@@ -115,13 +113,7 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                     // 创建一个 timestamp用来写入帧中
                     FrameRecorder frameRecorder = getFrameRecorder();
                     long current = System.currentTimeMillis();
-
-
-                    if(getPauseTime()!=0&&getGoOnTime()!=0&&getPauseTime()<getGoOnTime()) {
-                        offset = 1000 * ((current - getStartTime())-(getGoOnTime()-getPauseTime()));
-                    }else{
-                        offset = 1000 * (current - getStartTime());
-                    }
+                    long offset = 1000 * ((current - getStartTime()) - getTotalPauseTime());
                     // 检查偏移量
                     if (offset > frameRecorder.getTimestamp()) {
                         frameRecorder.setTimestamp(offset);
@@ -135,7 +127,7 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                     if (image != null) {
                         image.release();
                     }
-                    if (file != null&&file.exists()) {
+                    if (file != null && file.exists()) {
                         file.delete();
                     }
                 }

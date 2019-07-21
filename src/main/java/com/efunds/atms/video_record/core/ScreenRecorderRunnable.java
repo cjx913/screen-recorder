@@ -26,6 +26,10 @@ public abstract class ScreenRecorderRunnable implements Runnable {
     @Getter
     private long stopTime;
 
+    @Setter
+    @Getter
+    private long totalPauseTime = 0L;
+
     public ScreenRecorderRunnable() {
     }
 
