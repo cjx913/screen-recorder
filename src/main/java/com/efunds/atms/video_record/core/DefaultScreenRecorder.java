@@ -103,12 +103,11 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                     Point point = MouseInfo.getPointerInfo().getLocation();
                     screenshot.createGraphics().drawImage(cursor, point.x, point.y, null);
 
+                    // 将screenshot对象写入图像文件
                     String name = path.substring(0, path.lastIndexOf(".")) + ".JPEG";
                     file = new File(name);
-                    // 将screenshot对象写入图像文件
                     ImageIO.write(screenshot, "JPEG", file);
 
-                    // videoGraphics.drawImage(screenCapture, 0, 0, null);
                     image = cvLoadImage(name);
                     if (image != null && image.height() > 0 && image.width() > 0) {
                         // 创建一个 timestamp用来写入帧中
