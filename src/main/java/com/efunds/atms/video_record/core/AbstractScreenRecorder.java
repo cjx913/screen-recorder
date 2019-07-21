@@ -14,7 +14,13 @@ public abstract class AbstractScreenRecorder implements ScreenRecorder {
      */
     private double frameRate;
 
+    /**
+     * 录屏线程
+     */
     private ScreenRecorderRunnable screenRecorderRunnable;
+    /**
+     * 录屏的任务执行器
+     */
     private ScheduledThreadPoolExecutor videoExecutor = new ScheduledThreadPoolExecutor(1);
 
     public AbstractScreenRecorder() {
@@ -30,6 +36,9 @@ public abstract class AbstractScreenRecorder implements ScreenRecorder {
 
     @Override
     public void start() {
+        if (screenRecorderRunnable == null) {
+            throw new IllegalArgumentException("screenRecorderRunnable can be null");
+        }
         System.out.println("-------start------");
         if (ScreenRecorderRunnable.ScreenRecorderRunnableStatus.STOP.equals(screenRecorderRunnable.getStatus())) {
             //记录开始时间

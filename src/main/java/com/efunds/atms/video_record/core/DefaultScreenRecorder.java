@@ -96,7 +96,7 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                 opencv_core.IplImage image = null;
                 File file = null;
                 try {
-                    //截图
+                    //截图(全屏)
                     BufferedImage screenshot = robot.createScreenCapture(screenshotRectangle);
                     //添加鼠标
                     Point point = MouseInfo.getPointerInfo().getLocation();
@@ -108,21 +108,22 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                     ImageIO.write(screenshot, "JPEG", file);
 
                     // videoGraphics.drawImage(screenCapture, 0, 0, null);
-                    image = cvLoadImage(name); // 非常吃内存！！
-
-                    // 创建一个 timestamp用来写入帧中
-                    FrameRecorder frameRecorder = getFrameRecorder();
-                    long current = System.currentTimeMillis();
-                    long offset = 1000 * ((current - getStartTime()) - getTotalPauseTime());
-                    // 检查偏移量
-                    if (offset > frameRecorder.getTimestamp()) {
-                        frameRecorder.setTimestamp(offset);
+                    image = cvLoadImage(name);
+                    if(image!=null&&image.height()>0&&image.width()>0) {
+                        // 创建一个 timestamp用来写入帧中
+                        FrameRecorder frameRecorder = getFrameRecorder();
+                        long current = System.currentTimeMillis();
+                        long offset = 1000 * ((current - getStartTime()) - getTotalPauseTime());
+                        // 检查偏移量
+                        if (offset > frameRecorder.getTimestamp()) {
+                            frameRecorder.setTimestamp(offset);
+                        }
+                        frameRecorder.record(conveter.convert(image));
+                        opencv_core.cvReleaseImage(image);
                     }
-                    frameRecorder.record(conveter.convert(image));
-                    opencv_core.cvReleaseImage(image);
 
                 } catch (Exception e) {
-                    e.printStackTrace();
+//                    e.printStackTrace();
                 } finally {
                     if (image != null) {
                         image.release();

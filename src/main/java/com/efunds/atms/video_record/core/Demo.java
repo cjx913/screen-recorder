@@ -3,7 +3,7 @@ package com.efunds.atms.video_record.core;
 public class Demo {
     public static void main(String[] args) throws InterruptedException {
         String path = "/home/cjx913/Videos/demo.mp4";
-        ScreenRecorder screenRecorder = new DefaultScreenRecorder(path, 25);
+        ScreenRecorder screenRecorder = new DefaultScreenRecorder(path, 15);
         screenRecorder.start();
         sleep(10,"start");
         screenRecorder.pause();
