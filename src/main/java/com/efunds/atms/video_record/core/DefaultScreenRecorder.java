@@ -19,10 +19,6 @@ import java.io.IOException;
 import static org.bytedeco.javacpp.helper.opencv_imgcodecs.cvLoadImage;
 
 public class DefaultScreenRecorder extends AbstractScreenRecorder {
-    @Setter
-    @Getter
-    private Rectangle screenshotRectangle = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
-
     private String path;
 
     public DefaultScreenRecorder(String path, double frameRate) {
@@ -76,6 +72,7 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
          */
         BufferedImage cursor;
         private OpenCVFrameConverter.ToIplImage conveter;
+        private boolean showCursor = true;
 
         {
             try {
@@ -97,20 +94,21 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                 opencv_core.IplImage image = null;
                 File file = null;
                 try {
-                    //截图(全屏)
+                    //截图
                     BufferedImage screenshot = robot.createScreenCapture(screenshotRectangle);
-                    //添加鼠标
-                    Point point = MouseInfo.getPointerInfo().getLocation();
-                    screenshot.createGraphics().drawImage(cursor, point.x, point.y, null);
-
+                    if(showCursor) {
+                        //添加鼠标
+                        Point point = MouseInfo.getPointerInfo().getLocation();
+                        screenshot.createGraphics().drawImage(cursor, point.x, point.y, null);
+                    }
                     // 将screenshot对象写入图像文件
                     String name = path.substring(0, path.lastIndexOf(".")) + ".JPEG";
                     file = new File(name);
                     ImageIO.write(screenshot, "JPEG", file);
 
+                    //截图添加到视频
                     image = cvLoadImage(name);
                     if (image != null && image.height() > 0 && image.width() > 0) {
-                        // 创建一个 timestamp用来写入帧中
                         FrameRecorder frameRecorder = getFrameRecorder();
                         long current = System.currentTimeMillis();
                         long offset = 1000 * ((current - getStartTime()) - getTotalPauseTime());
@@ -118,6 +116,7 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                         if (offset > frameRecorder.getTimestamp()) {
                             frameRecorder.setTimestamp(offset);
                         }
+                        // 写入帧中
                         frameRecorder.record(conveter.convert(image));
                         opencv_core.cvReleaseImage(image);
                     }

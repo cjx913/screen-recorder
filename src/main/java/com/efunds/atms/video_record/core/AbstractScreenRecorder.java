@@ -3,8 +3,10 @@ package com.efunds.atms.video_record.core;
 import com.efunds.atms.video_record.exception.ScreenRecorderException;
 import com.efunds.atms.video_record.util.FrameRecorderUtil;
 import lombok.Getter;
+import lombok.Setter;
 import org.bytedeco.javacv.FrameRecorder;
 
+import java.awt.*;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
@@ -14,6 +16,13 @@ public abstract class AbstractScreenRecorder implements ScreenRecorder {
      * 帧率
      */
     private double frameRate;
+
+    /**
+     * 截图区域
+     */
+    @Setter
+    @Getter
+    protected Rectangle screenshotRectangle = new Rectangle(Toolkit.getDefaultToolkit().getScreenSize());
 
     /**
      * 录屏线程
