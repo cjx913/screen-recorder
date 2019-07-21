@@ -1,5 +1,6 @@
 package com.efunds.atms.video_record.core;
 
+import com.efunds.atms.video_record.exception.ScreenRecorderException;
 import com.efunds.atms.video_record.util.FrameRecorderUtil;
 import lombok.Getter;
 import org.bytedeco.javacv.FrameRecorder;
@@ -28,7 +29,7 @@ public abstract class AbstractScreenRecorder implements ScreenRecorder {
 
     public AbstractScreenRecorder(ScreenRecorderRunnable screenRecorderRunnable) {
         if (screenRecorderRunnable == null) {
-            throw new IllegalArgumentException("screenRecorderRunnable can be null");
+            throw new ScreenRecorderException("screenRecorderRunnable can be null");
         }
         setScreenRecorderRunnable(screenRecorderRunnable);
     }
@@ -37,7 +38,7 @@ public abstract class AbstractScreenRecorder implements ScreenRecorder {
     @Override
     public void start() {
         if (screenRecorderRunnable == null) {
-            throw new IllegalArgumentException("screenRecorderRunnable can be null");
+            throw new ScreenRecorderException("screenRecorderRunnable can be null");
         }
         System.out.println("-------start------");
         if (ScreenRecorderRunnable.ScreenRecorderRunnableStatus.STOP.equals(screenRecorderRunnable.getStatus())) {

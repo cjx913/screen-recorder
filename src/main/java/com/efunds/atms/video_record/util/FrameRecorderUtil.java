@@ -1,5 +1,6 @@
 package com.efunds.atms.video_record.util;
 
+import com.efunds.atms.video_record.exception.FrameRecorderUtilException;
 import org.bytedeco.javacv.FrameRecorder;
 
 public class FrameRecorderUtil {
@@ -8,7 +9,7 @@ public class FrameRecorderUtil {
             try {
                 frameRecorder.start();
             } catch (FrameRecorder.Exception e) {
-                e.printStackTrace();
+                throw new FrameRecorderUtilException("frameRecorder start error!",e);
             }
         }
     }
@@ -18,7 +19,7 @@ public class FrameRecorderUtil {
             try {
                 frameRecorder.stop();
             } catch (FrameRecorder.Exception e) {
-                e.printStackTrace();
+                throw new FrameRecorderUtilException("frameRecorder stop error!",e);
             }
         }
     }
@@ -28,7 +29,7 @@ public class FrameRecorderUtil {
             try {
                 frameRecorder.release();
             } catch (FrameRecorder.Exception e) {
-                e.printStackTrace();
+                throw new FrameRecorderUtilException("frameRecorder release error!",e);
             }
         }
     }
@@ -38,7 +39,7 @@ public class FrameRecorderUtil {
             try {
                 frameRecorder.close();
             } catch (FrameRecorder.Exception e) {
-                e.printStackTrace();
+                throw new FrameRecorderUtilException("frameRecorder close error!",e);
             }
         }
     }

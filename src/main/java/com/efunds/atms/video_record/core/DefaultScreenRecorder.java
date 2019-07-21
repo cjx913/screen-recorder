@@ -1,5 +1,6 @@
 package com.efunds.atms.video_record.core;
 
+import com.efunds.atms.video_record.exception.ScreenRecorderException;
 import lombok.Getter;
 import lombok.Setter;
 import org.bytedeco.javacpp.avcodec;
@@ -82,7 +83,7 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                 cursor = ImageIO.read(this.getClass().getResourceAsStream("/image/cursor.png"));
                 conveter = new OpenCVFrameConverter.ToIplImage();
             } catch (AWTException | IOException e) {
-                e.printStackTrace();
+                throw new ScreenRecorderException("init params error",e);
             }
         }
 
@@ -109,7 +110,7 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
 
                     // videoGraphics.drawImage(screenCapture, 0, 0, null);
                     image = cvLoadImage(name);
-                    if(image!=null&&image.height()>0&&image.width()>0) {
+                    if (image != null && image.height() > 0 && image.width() > 0) {
                         // 创建一个 timestamp用来写入帧中
                         FrameRecorder frameRecorder = getFrameRecorder();
                         long current = System.currentTimeMillis();
@@ -123,7 +124,7 @@ public class DefaultScreenRecorder extends AbstractScreenRecorder {
                     }
 
                 } catch (Exception e) {
-//                    e.printStackTrace();
+                    throw new ScreenRecorderException(e.getMessage(), e);
                 } finally {
                     if (image != null) {
                         image.release();
