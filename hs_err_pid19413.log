@@ -1,0 +1,1059 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f1c81b5838f, pid=19413, tid=0x00007f1c90110700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_191-b12) (build 1.8.0_191-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.191-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libavcodec.so.58+0x8d038f]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f1ce01ba000):  JavaThread "pool-1-thread-1" [_thread_in_native, id=19453, stack(0x00007f1c90010000,0x00007f1c90111000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x000000000004d1b0
+
+Registers:
+RAX=0x00007f1ce09ab780, RBX=0x00000000000004dd, RCX=0x0000000000000580, RDX=0x00007f1c7475c8c0
+RSP=0x00007f1c901048c8, RBP=0x0000000000000000, RSI=0x000000000004d1b0, RDI=0x00007f1ce0a4bcc0
+R8 =0xffffffffffffff80, R9 =0x00007f1ce09b86c0, R10=0x00007f1c752c23a0, R11=0x00000000000001b0
+R12=0x0000000000000580, R13=0x00000000000002c0, R14=0x000000000004d1b0, R15=0x00007f1ce09abc00
+RIP=0x00007f1c81b5838f, EFLAGS=0x0000000000010207, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f1c901048c8)
+0x00007f1c901048c8:   00007f1c817e0bdf 000c000c00000000
+0x00007f1c901048d8:   0000001b748b9190 00007f1c9010c760
+0x00007f1c901048e8:   00007f1c90109d40 00000000000134d8
+0x00007f1c901048f8:   00007f1c901050f0 0000000800000000
+0x00007f1c90104908:   00007f1ce09ad2d4 00007f1c00000000
+0x00007f1c90104918:   00000000000134d8 00007f1c7475c8c0
+0x00007f1c90104928:   00007f1c901056f0 00007f1c9010ca90
+0x00007f1c90104938:   00007f1c00001600 000000080000000e
+0x00007f1c90104948:   0000000000002c00 00007f1c74831a60
+0x00007f1c90104958:   00007f1c748766e0 00007f1c0000000e
+0x00007f1c90104968:   00007f1c0000001b 00007f1c7475c8c8
+0x00007f1c90104978:   00007f1c90106e60 00007f1c901085d0
+0x00007f1c90104988:   00007f1c7475f4c0 00007f1c7475f4c8
+0x00007f1c90104998:   00007f1c7475c8b8 00007f1c7475f4b0
+0x00007f1c901049a8:   00007f1c7475f4b8 00007f1ce09abc00
+0x00007f1c901049b8:   00007f1c90105670 0000002000000000
+0x00007f1c901049c8:   000000007fffffff 0000000000000000
+0x00007f1c901049d8:   0000000000000000 0000000000000000
+0x00007f1c901049e8:   0000002000000000 00007f1c90106268
+0x00007f1c901049f8:   00007f1c7adc4740 0000002000000000
+0x00007f1c90104a08:   00007f1c901056f0 00007f1c901056f0
+0x00007f1c90104a18:   00007f1c901062a8 00007f1c00005dc0
+0x00007f1c90104a28:   0000002000000000 00007f1c901062a8
+0x00007f1c90104a38:   00007f1c901062a8 00007f1c90106e60
+0x00007f1c90104a48:   00007f1c00005dc0 0000002000000000
+0x00007f1c90104a58:   00007f1c90106e60 00007f1c90106e60
+0x00007f1c90104a68:   00007f1c90107a18 00007f1c00005dc0
+0x00007f1c90104a78:   0000002000000000 00007f1c90107a18
+0x00007f1c90104a88:   00007f1c90107a18 00007f1c901085d0
+0x00007f1c90104a98:   00007f1c00005dc0 0000002000000000
+0x00007f1c90104aa8:   00007f1c901085d0 00007f1c901085d0
+0x00007f1c90104ab8:   00007f1c90109188 0000000100005dc0 
+
+Instructions: (pc=0x00007f1c81b5838f)
+0x00007f1c81b5836f:   c0 10 75 cb f3 c3 90 90 90 90 90 90 90 90 90 90
+0x00007f1c81b5837f:   90 66 0f ef e4 48 83 ef 80 49 c7 c0 80 ff ff ff
+0x00007f1c81b5838f:   f3 0f 7e 06 f3 0f 7e 12 f3 0f 7e 0c 0e f3 0f 7e
+0x00007f1c81b5839f:   1c 0a 66 0f 60 c4 66 0f 60 cc 66 0f 60 d4 66 0f 
+
+Register to memory mapping:
+
+RAX=0x00007f1ce09ab780 is an unknown value
+RBX=0x00000000000004dd is an unknown value
+RCX=0x0000000000000580 is an unknown value
+RDX=0x00007f1c7475c8c0 is an unknown value
+RSP=0x00007f1c901048c8 is pointing into the stack for thread: 0x00007f1ce01ba000
+RBP=0x0000000000000000 is an unknown value
+RSI=0x000000000004d1b0 is an unknown value
+RDI=0x00007f1ce0a4bcc0 is an unknown value
+R8 =0xffffffffffffff80 is an unknown value
+R9 =0x00007f1ce09b86c0 is an unknown value
+R10=0x00007f1c752c23a0 is an unknown value
+R11=0x00000000000001b0 is an unknown value
+R12=0x0000000000000580 is an unknown value
+R13=0x00000000000002c0 is an unknown value
+R14=0x000000000004d1b0 is an unknown value
+R15=0x00007f1ce09abc00 is an unknown value
+
+
+Stack: [0x00007f1c90010000,0x00007f1c90111000],  sp=0x00007f1c901048c8,  free space=978k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libavcodec.so.58+0x8d038f]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  org.bytedeco.javacpp.avcodec.avcodec_encode_video2(Lorg/bytedeco/javacpp/avcodec$AVCodecContext;Lorg/bytedeco/javacpp/avcodec$AVPacket;Lorg/bytedeco/javacpp/avutil$AVFrame;[I)I+0
+j  org.bytedeco.javacv.FFmpegFrameRecorder.recordImage(IIIIII[Ljava/nio/Buffer;)Z+759
+j  org.bytedeco.javacv.FFmpegFrameRecorder.record(Lorg/bytedeco/javacv/Frame;I)V+70
+j  org.bytedeco.javacv.FFmpegFrameRecorder.record(Lorg/bytedeco/javacv/Frame;)V+3
+J 1171 C1 com.efunds.atms.video_record.core.DefaultScreenRecorder$VideoScreenRecorderRunnable.run()V (286 bytes) @ 0x00007f1cd146d1d4 [0x00007f1cd146bac0+0x1714]
+J 1169 C1 java.util.concurrent.FutureTask.runAndReset()Z (128 bytes) @ 0x00007f1cd146a39c [0x00007f1cd146a0c0+0x2dc]
+J 1158 C1 java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run()V (59 bytes) @ 0x00007f1cd14604cc [0x00007f1cd145ffa0+0x52c]
+j  java.util.concurrent.ThreadPoolExecutor.runWorker(Ljava/util/concurrent/ThreadPoolExecutor$Worker;)V+95
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f1ce0014800 JavaThread "DestroyJavaVM" [_thread_blocked, id=19416, stack(0x00007f1ce8afa000,0x00007f1ce8bfa000)]
+=>0x00007f1ce01ba000 JavaThread "pool-1-thread-1" [_thread_in_native, id=19453, stack(0x00007f1c90010000,0x00007f1c90111000)]
+  0x00007f1ce08e1000 JavaThread "JavaCPP Deallocator" daemon [_thread_blocked, id=19448, stack(0x00007f1c90f7b000,0x00007f1c9107c000)]
+  0x00007f1ce0865000 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=19447, stack(0x00007f1c91b6b000,0x00007f1c91c6c000)]
+  0x00007f1ce084b800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=19446, stack(0x00007f1c9207c000,0x00007f1c9217d000)]
+  0x00007f1ce074e800 JavaThread "Service Thread" daemon [_thread_blocked, id=19444, stack(0x00007f1cbc029000,0x00007f1cbc12a000)]
+  0x00007f1ce0729800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=19443, stack(0x00007f1cbf343000,0x00007f1cbf443000)]
+  0x00007f1ce0727000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=19442, stack(0x00007f1cbf444000,0x00007f1cbf544000)]
+  0x00007f1ce0725800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=19441, stack(0x00007f1cbf545000,0x00007f1cbf645000)]
+  0x00007f1ce0724000 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=19440, stack(0x00007f1cbf645000,0x00007f1cbf746000)]
+  0x00007f1ce0188800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=19439, stack(0x00007f1cbf8ab000,0x00007f1cbf9ac000)]
+  0x00007f1ce0155800 JavaThread "Finalizer" daemon [_thread_blocked, id=19432, stack(0x00007f1cbfcfd000,0x00007f1cbfdfe000)]
+  0x00007f1ce0153000 JavaThread "Reference Handler" daemon [_thread_blocked, id=19431, stack(0x00007f1cbfdfe000,0x00007f1cbfeff000)]
+
+Other Threads:
+  0x00007f1ce0149800 VMThread [stack: 0x00007f1cbff00000,0x00007f1cc0000000] [id=19429]
+  0x00007f1ce075b800 WatcherThread [stack: 0x00007f1c93f00000,0x00007f1c94000000] [id=19445]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 356864K, used 194698K [0x00000000d6e00000, 0x00000000efb00000, 0x0000000100000000)
+  eden space 352768K, 55% used [0x00000000d6e00000,0x00000000e2c228f8,0x00000000ec680000)
+  from space 4096K, 0% used [0x00000000ef300000,0x00000000ef300000,0x00000000ef700000)
+  to   space 4096K, 0% used [0x00000000ef700000,0x00000000ef700000,0x00000000efb00000)
+ ParOldGen       total 64512K, used 6276K [0x0000000084a00000, 0x0000000088900000, 0x00000000d6e00000)
+  object space 64512K, 9% used [0x0000000084a00000,0x0000000085021398,0x0000000088900000)
+ Metaspace       used 12953K, capacity 13160K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+
+Card table byte_map: [0x00007f1ce524a000,0x00007f1ce5626000] byte_map_base: 0x00007f1ce4e25000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f1ce7fead40
+ Begin Bits: [0x00007f1ccd250000, 0x00007f1ccf128000)
+ End Bits:   [0x00007f1ccf128000, 0x00007f1cd1000000)
+
+Polling page: 0x00007f1ce8c1f000
+
+CodeCache: size=245760Kb used=4650Kb max_used=4658Kb free=241109Kb
+ bounds [0x00007f1cd1000000, 0x00007f1cd1490000, 0x00007f1ce0000000]
+ total_blobs=1812 nmethods=1221 adapters=505
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 29.087 Thread 0x00007f1ce0729800 1217       3       java.util.Stack::<init> (5 bytes)
+Event: 29.087 Thread 0x00007f1ce0729800 nmethod 1217 0x00007f1cd1489ed0 code [0x00007f1cd148a040, 0x00007f1cd148a288]
+Event: 29.087 Thread 0x00007f1ce0729800 1218       3       sun.java2d.Disposer::addRecord (9 bytes)
+Event: 29.087 Thread 0x00007f1ce0729800 nmethod 1218 0x00007f1cd1489b10 code [0x00007f1cd1489c80, 0x00007f1cd1489e08]
+Event: 29.148 Thread 0x00007f1ce0727000 1219   !   4       com.sun.imageio.plugins.jpeg.JPEGImageWriter::writeOutputData (42 bytes)
+Event: 29.151 Thread 0x00007f1ce0727000 nmethod 1219 0x00007f1cd148f4d0 code [0x00007f1cd148f640, 0x00007f1cd148f868]
+Event: 29.166 Thread 0x00007f1ce0729800 1220       3       org.bytedeco.javacpp.Pointer::init (52 bytes)
+Event: 29.167 Thread 0x00007f1ce0729800 nmethod 1220 0x00007f1cd148edd0 code [0x00007f1cd148ef60, 0x00007f1cd148f358]
+Event: 29.167 Thread 0x00007f1ce0729800 1221       3       org.bytedeco.javacpp.Pointer$NativeDeallocator::<init> (23 bytes)
+Event: 29.167 Thread 0x00007f1ce0729800 nmethod 1221 0x00007f1cd1489710 code [0x00007f1cd1489880, 0x00007f1cd1489a68]
+
+GC Heap History (10 events):
+Event: 21.460 GC heap before
+{Heap before GC invocations=11 (full 0):
+ PSYoungGen      total 409600K, used 405632K [0x00000000d6e00000, 0x00000000f0200000, 0x0000000100000000)
+  eden space 405504K, 100% used [0x00000000d6e00000,0x00000000efa00000,0x00000000efa00000)
+  from space 4096K, 3% used [0x00000000efe00000,0x00000000efe20000,0x00000000f0200000)
+  to   space 4096K, 0% used [0x00000000efa00000,0x00000000efa00000,0x00000000efe00000)
+ ParOldGen       total 84992K, used 63729K [0x0000000084a00000, 0x0000000089d00000, 0x00000000d6e00000)
+  object space 84992K, 74% used [0x0000000084a00000,0x000000008883c7f0,0x0000000089d00000)
+ Metaspace       used 12907K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+Event: 21.469 GC heap after
+Heap after GC invocations=11 (full 0):
+ PSYoungGen      total 387584K, used 128K [0x00000000d6e00000, 0x00000000efe80000, 0x0000000100000000)
+  eden space 387072K, 0% used [0x00000000d6e00000,0x00000000d6e00000,0x00000000ee800000)
+  from space 512K, 25% used [0x00000000efa00000,0x00000000efa20000,0x00000000efa80000)
+  to   space 4096K, 0% used [0x00000000efa80000,0x00000000efa80000,0x00000000efe80000)
+ ParOldGen       total 84992K, used 80146K [0x0000000084a00000, 0x0000000089d00000, 0x00000000d6e00000)
+  object space 84992K, 94% used [0x0000000084a00000,0x0000000089844830,0x0000000089d00000)
+ Metaspace       used 12907K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+}
+Event: 21.469 GC heap before
+{Heap before GC invocations=12 (full 1):
+ PSYoungGen      total 387584K, used 128K [0x00000000d6e00000, 0x00000000efe80000, 0x0000000100000000)
+  eden space 387072K, 0% used [0x00000000d6e00000,0x00000000d6e00000,0x00000000ee800000)
+  from space 512K, 25% used [0x00000000efa00000,0x00000000efa20000,0x00000000efa80000)
+  to   space 4096K, 0% used [0x00000000efa80000,0x00000000efa80000,0x00000000efe80000)
+ ParOldGen       total 84992K, used 80146K [0x0000000084a00000, 0x0000000089d00000, 0x00000000d6e00000)
+  object space 84992K, 94% used [0x0000000084a00000,0x0000000089844830,0x0000000089d00000)
+ Metaspace       used 12907K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+Event: 21.488 GC heap after
+Heap after GC invocations=12 (full 1):
+ PSYoungGen      total 387584K, used 0K [0x00000000d6e00000, 0x00000000efe80000, 0x0000000100000000)
+  eden space 387072K, 0% used [0x00000000d6e00000,0x00000000d6e00000,0x00000000ee800000)
+  from space 512K, 0% used [0x00000000efa00000,0x00000000efa00000,0x00000000efa80000)
+  to   space 4096K, 0% used [0x00000000efa80000,0x00000000efa80000,0x00000000efe80000)
+ ParOldGen       total 61440K, used 6276K [0x0000000084a00000, 0x0000000088600000, 0x00000000d6e00000)
+  object space 61440K, 10% used [0x0000000084a00000,0x0000000085021198,0x0000000088600000)
+ Metaspace       used 12907K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+}
+Event: 24.601 GC heap before
+{Heap before GC invocations=13 (full 1):
+ PSYoungGen      total 387584K, used 387072K [0x00000000d6e00000, 0x00000000efe80000, 0x0000000100000000)
+  eden space 387072K, 100% used [0x00000000d6e00000,0x00000000ee800000,0x00000000ee800000)
+  from space 512K, 0% used [0x00000000efa00000,0x00000000efa00000,0x00000000efa80000)
+  to   space 4096K, 0% used [0x00000000efa80000,0x00000000efa80000,0x00000000efe80000)
+ ParOldGen       total 61440K, used 6276K [0x0000000084a00000, 0x0000000088600000, 0x00000000d6e00000)
+  object space 61440K, 10% used [0x0000000084a00000,0x0000000085021198,0x0000000088600000)
+ Metaspace       used 12939K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+Event: 24.603 GC heap after
+Heap after GC invocations=13 (full 1):
+ PSYoungGen      total 370176K, used 128K [0x00000000d6e00000, 0x00000000efb00000, 0x0000000100000000)
+  eden space 369664K, 0% used [0x00000000d6e00000,0x00000000d6e00000,0x00000000ed700000)
+  from space 512K, 25% used [0x00000000efa80000,0x00000000efaa0000,0x00000000efb00000)
+  to   space 4096K, 0% used [0x00000000ef300000,0x00000000ef300000,0x00000000ef700000)
+ ParOldGen       total 61440K, used 22676K [0x0000000084a00000, 0x0000000088600000, 0x00000000d6e00000)
+  object space 61440K, 36% used [0x0000000084a00000,0x00000000860251d8,0x0000000088600000)
+ Metaspace       used 12939K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+}
+Event: 27.610 GC heap before
+{Heap before GC invocations=14 (full 1):
+ PSYoungGen      total 370176K, used 369792K [0x00000000d6e00000, 0x00000000efb00000, 0x0000000100000000)
+  eden space 369664K, 100% used [0x00000000d6e00000,0x00000000ed700000,0x00000000ed700000)
+  from space 512K, 25% used [0x00000000efa80000,0x00000000efaa0000,0x00000000efb00000)
+  to   space 4096K, 0% used [0x00000000ef300000,0x00000000ef300000,0x00000000ef700000)
+ ParOldGen       total 61440K, used 22676K [0x0000000084a00000, 0x0000000088600000, 0x00000000d6e00000)
+  object space 61440K, 36% used [0x0000000084a00000,0x00000000860251d8,0x0000000088600000)
+ Metaspace       used 12943K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+Event: 27.613 GC heap after
+Heap after GC invocations=14 (full 1):
+ PSYoungGen      total 356864K, used 160K [0x00000000d6e00000, 0x00000000efb00000, 0x0000000100000000)
+  eden space 352768K, 0% used [0x00000000d6e00000,0x00000000d6e00000,0x00000000ec680000)
+  from space 4096K, 3% used [0x00000000ef300000,0x00000000ef328000,0x00000000ef700000)
+  to   space 4096K, 0% used [0x00000000ef700000,0x00000000ef700000,0x00000000efb00000)
+ ParOldGen       total 61440K, used 39084K [0x0000000084a00000, 0x0000000088600000, 0x00000000d6e00000)
+  object space 61440K, 63% used [0x0000000084a00000,0x000000008702b218,0x0000000088600000)
+ Metaspace       used 12943K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+}
+Event: 27.613 GC heap before
+{Heap before GC invocations=15 (full 2):
+ PSYoungGen      total 356864K, used 160K [0x00000000d6e00000, 0x00000000efb00000, 0x0000000100000000)
+  eden space 352768K, 0% used [0x00000000d6e00000,0x00000000d6e00000,0x00000000ec680000)
+  from space 4096K, 3% used [0x00000000ef300000,0x00000000ef328000,0x00000000ef700000)
+  to   space 4096K, 0% used [0x00000000ef700000,0x00000000ef700000,0x00000000efb00000)
+ ParOldGen       total 61440K, used 39084K [0x0000000084a00000, 0x0000000088600000, 0x00000000d6e00000)
+  object space 61440K, 63% used [0x0000000084a00000,0x000000008702b218,0x0000000088600000)
+ Metaspace       used 12943K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+Event: 27.621 GC heap after
+Heap after GC invocations=15 (full 2):
+ PSYoungGen      total 356864K, used 0K [0x00000000d6e00000, 0x00000000efb00000, 0x0000000100000000)
+  eden space 352768K, 0% used [0x00000000d6e00000,0x00000000d6e00000,0x00000000ec680000)
+  from space 4096K, 0% used [0x00000000ef300000,0x00000000ef300000,0x00000000ef700000)
+  to   space 4096K, 0% used [0x00000000ef700000,0x00000000ef700000,0x00000000efb00000)
+ ParOldGen       total 64512K, used 6276K [0x0000000084a00000, 0x0000000088900000, 0x00000000d6e00000)
+  object space 64512K, 9% used [0x0000000084a00000,0x0000000085021398,0x0000000088900000)
+ Metaspace       used 12943K, capacity 13096K, committed 13312K, reserved 1060864K
+  class space    used 1396K, capacity 1470K, committed 1536K, reserved 1048576K
+}
+
+Deoptimization events (2 events):
+Event: 1.042 Thread 0x00007f1ce0014800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f1cd1187414 method=java.lang.String.indexOf([CII[CIII)I @ 3
+Event: 2.100 Thread 0x00007f1ce01ba000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f1cd12de154 method=sun.misc.URLClassPath$1.next()Z @ 56
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.212 Thread 0x00007f1ce0014800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d71482e0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jvm.cpp, line 1435]
+Event: 0.212 Thread 0x00007f1ce0014800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d71484f0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jvm.cpp, line 1435]
+Event: 0.305 Thread 0x00007f1ce0014800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d73db898) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jvm.cpp, line 1435]
+Event: 0.305 Thread 0x00007f1ce0014800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d73dbaa8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jvm.cpp, line 1435]
+Event: 0.305 Thread 0x00007f1ce0014800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d73de550) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jvm.cpp, line 1435]
+Event: 0.306 Thread 0x00007f1ce0014800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d73de760) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jvm.cpp, line 1435]
+Event: 0.371 Thread 0x00007f1ce0014800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d7543358) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/methodHandles.cpp, line 1167]
+Event: 0.374 Thread 0x00007f1ce0014800 Exception <a 'java/lang/NoSuchFieldError': method resolution failed> (0x00000000d75515d0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/methodHandles.cpp, line 1167]
+Event: 0.437 Thread 0x00007f1ce0014800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d75f6738) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+Event: 0.437 Thread 0x00007f1ce0014800 Exception <a 'java/io/FileNotFoundException'> (0x00000000d75f7128) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u191/11894/hotspot/src/share/vm/prims/jni.cpp, line 709]
+
+Events (10 events):
+Event: 21.490 Executing VM operation: RevokeBias
+Event: 21.490 Executing VM operation: RevokeBias done
+Event: 21.490 Executing VM operation: BulkRevokeBias
+Event: 21.490 Executing VM operation: BulkRevokeBias done
+Event: 21.490 Executing VM operation: BulkRevokeBias
+Event: 21.491 Executing VM operation: BulkRevokeBias done
+Event: 24.601 Executing VM operation: ParallelGCFailedAllocation
+Event: 24.603 Executing VM operation: ParallelGCFailedAllocation done
+Event: 27.610 Executing VM operation: ParallelGCFailedAllocation
+Event: 27.621 Executing VM operation: ParallelGCFailedAllocation done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:04 7079961                            /home/cjx913/Application/java/jdk1.8.0_191/bin/java
+00600000-00601000 r--p 00000000 08:04 7079961                            /home/cjx913/Application/java/jdk1.8.0_191/bin/java
+00601000-00602000 rw-p 00001000 08:04 7079961                            /home/cjx913/Application/java/jdk1.8.0_191/bin/java
+022a4000-052e3000 rw-p 00000000 00:00 0                                  [heap]
+84a00000-88900000 rw-p 00000000 00:00 0 
+88900000-d6e00000 ---p 00000000 00:00 0 
+d6e00000-efb00000 rw-p 00000000 00:00 0 
+efb00000-100000000 ---p 00000000 00:00 0 
+100000000-100180000 rw-p 00000000 00:00 0 
+100180000-140000000 ---p 00000000 00:00 0 
+7f1c74000000-7f1c77fe4000 rw-p 00000000 00:00 0 
+7f1c77fe4000-7f1c78000000 ---p 00000000 00:00 0 
+7f1c78bc8000-7f1c78bf5000 r-xp 00000000 08:04 9321650                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_imgcodecs.so
+7f1c78bf5000-7f1c78df4000 ---p 0002d000 08:04 9321650                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_imgcodecs.so
+7f1c78df4000-7f1c78df5000 r--p 0002c000 08:04 9321650                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_imgcodecs.so
+7f1c78df5000-7f1c78df6000 rw-p 0002d000 08:04 9321650                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_imgcodecs.so
+7f1c78df6000-7f1c79068000 r-xp 00000000 08:04 9321648                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_imgcodecs.so.4.0
+7f1c79068000-7f1c79268000 ---p 00272000 08:04 9321648                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_imgcodecs.so.4.0
+7f1c79268000-7f1c79271000 r--p 00272000 08:04 9321648                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_imgcodecs.so.4.0
+7f1c79271000-7f1c79275000 rw-p 0027b000 08:04 9321648                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_imgcodecs.so.4.0
+7f1c79275000-7f1c7927f000 rw-p 00000000 00:00 0 
+7f1c7927f000-7f1c793e1000 r-xp 00000000 08:04 9321647                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_imgproc.so
+7f1c793e1000-7f1c795e1000 ---p 00162000 08:04 9321647                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_imgproc.so
+7f1c795e1000-7f1c795ed000 r--p 00162000 08:04 9321647                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_imgproc.so
+7f1c795ed000-7f1c795ee000 rw-p 0016e000 08:04 9321647                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_imgproc.so
+7f1c795ee000-7f1c7976e000 rw-p 00000000 00:00 0 
+7f1c7976e000-7f1c797ee000 ---p 00000000 00:00 0 
+7f1c797ee000-7f1c79b65000 r-xp 00000000 08:04 9321646                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_core.so
+7f1c79b65000-7f1c79d65000 ---p 00377000 08:04 9321646                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_core.so
+7f1c79d65000-7f1c79db3000 r--p 00377000 08:04 9321646                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_core.so
+7f1c79db3000-7f1c79db6000 rw-p 003c5000 08:04 9321646                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniopencv_core.so
+7f1c79db6000-7f1c79db7000 rw-p 00000000 00:00 0 
+7f1c79db7000-7f1c7a0da000 r-xp 00000000 08:04 9321644                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_imgproc.so.4.0
+7f1c7a0da000-7f1c7a2d9000 ---p 00323000 08:04 9321644                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_imgproc.so.4.0
+7f1c7a2d9000-7f1c7a2e3000 r--p 00322000 08:04 9321644                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_imgproc.so.4.0
+7f1c7a2e3000-7f1c7a2ec000 rw-p 0032c000 08:04 9321644                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_imgproc.so.4.0
+7f1c7a2ec000-7f1c7a38b000 rw-p 00000000 00:00 0 
+7f1c7a38b000-7f1c7a6a3000 r-xp 00000000 08:04 9321642                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_core.so.4.0
+7f1c7a6a3000-7f1c7a8a3000 ---p 00318000 08:04 9321642                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_core.so.4.0
+7f1c7a8a3000-7f1c7a8ae000 r--p 00318000 08:04 9321642                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_core.so.4.0
+7f1c7a8ae000-7f1c7a8b3000 rw-p 00323000 08:04 9321642                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libopencv_core.so.4.0
+7f1c7a8b3000-7f1c7a8b9000 rw-p 00000000 00:00 0 
+7f1c7a8b9000-7f1c7a8ce000 r-xp 00000000 08:04 9321640                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libgomp.so.1
+7f1c7a8ce000-7f1c7aacd000 ---p 00015000 08:04 9321640                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libgomp.so.1
+7f1c7aacd000-7f1c7aace000 rw-p 00014000 08:04 9321640                    /home/cjx913/.javacpp/cache/opencv-4.0.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libgomp.so.1
+7f1c7aace000-7f1c7ab0f000 r-xp 00000000 08:04 8126690                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libjpeg.so
+7f1c7ab0f000-7f1c7ad0e000 ---p 00041000 08:04 8126690                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libjpeg.so
+7f1c7ad0e000-7f1c7ad0f000 r--p 00040000 08:04 8126690                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libjpeg.so
+7f1c7ad0f000-7f1c7ad10000 rw-p 00041000 08:04 8126690                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libjpeg.so
+7f1c7ad10000-7f1c7af10000 rw-p 00000000 00:00 0 
+7f1c7af10000-7f1c7af2a000 r-xp 00000000 08:04 7746210                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavdevice.so
+7f1c7af2a000-7f1c7b12a000 ---p 0001a000 08:04 7746210                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavdevice.so
+7f1c7b12a000-7f1c7b130000 r--p 0001a000 08:04 7746210                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavdevice.so
+7f1c7b130000-7f1c7b131000 rw-p 00020000 08:04 7746210                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavdevice.so
+7f1c7b131000-7f1c7b226000 r-xp 00000000 08:03 2764567                    /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f1c7b226000-7f1c7b426000 ---p 000f5000 08:03 2764567                    /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f1c7b426000-7f1c7b42e000 r--p 000f5000 08:03 2764567                    /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f1c7b42e000-7f1c7b42f000 rw-p 000fd000 08:03 2764567                    /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f1c7b42f000-7f1c7b436000 r-xp 00000000 08:03 2765970                    /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7f1c7b436000-7f1c7b635000 ---p 00007000 08:03 2765970                    /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7f1c7b635000-7f1c7b636000 r--p 00006000 08:03 2765970                    /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7f1c7b636000-7f1c7b637000 rw-p 00007000 08:03 2765970                    /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7f1c7b637000-7f1c7b63a000 r-xp 00000000 08:03 2765962                    /usr/lib/x86_64-linux-gnu/libxcb-shape.so.0.0.0
+7f1c7b63a000-7f1c7b839000 ---p 00003000 08:03 2765962                    /usr/lib/x86_64-linux-gnu/libxcb-shape.so.0.0.0
+7f1c7b839000-7f1c7b83a000 r--p 00002000 08:03 2765962                    /usr/lib/x86_64-linux-gnu/libxcb-shape.so.0.0.0
+7f1c7b83a000-7f1c7b83b000 rw-p 00003000 08:03 2765962                    /usr/lib/x86_64-linux-gnu/libxcb-shape.so.0.0.0
+7f1c7b83b000-7f1c7b83d000 r-xp 00000000 08:03 2765964                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f1c7b83d000-7f1c7ba3c000 ---p 00002000 08:03 2765964                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f1c7ba3c000-7f1c7ba3d000 r--p 00001000 08:03 2765964                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f1c7ba3d000-7f1c7ba3e000 rw-p 00002000 08:03 2765964                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f1c7ba3e000-7f1c7bd8c000 r-xp 00000000 08:04 7746205                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavfilter.so.7
+7f1c7bd8c000-7f1c7bf8b000 ---p 0034e000 08:04 7746205                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavfilter.so.7
+7f1c7bf8b000-7f1c7bfef000 r--p 0034d000 08:04 7746205                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavfilter.so.7
+7f1c7bfef000-7f1c7bffc000 rw-p 003b1000 08:04 7746205                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavfilter.so.7
+7f1c7bffc000-7f1c7c000000 rw-p 00000000 00:00 0 
+7f1c7c000000-7f1c7c021000 rw-p 00000000 00:00 0 
+7f1c7c021000-7f1c80000000 ---p 00000000 00:00 0 
+7f1c80075000-7f1c80086000 r-xp 00000000 08:04 7746208                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavdevice.so.58
+7f1c80086000-7f1c80285000 ---p 00011000 08:04 7746208                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavdevice.so.58
+7f1c80285000-7f1c80287000 r--p 00010000 08:04 7746208                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavdevice.so.58
+7f1c80287000-7f1c80288000 rw-p 00012000 08:04 7746208                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavdevice.so.58
+7f1c80288000-7f1c802cd000 r-xp 00000000 08:04 7746207                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavfilter.so
+7f1c802cd000-7f1c804cc000 ---p 00045000 08:04 7746207                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavfilter.so
+7f1c804cc000-7f1c804ea000 r--p 00044000 08:04 7746207                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavfilter.so
+7f1c804ea000-7f1c804eb000 rw-p 00062000 08:04 7746207                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavfilter.so
+7f1c804eb000-7f1c804fb000 r-xp 00000000 08:04 7746204                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnipostproc.so
+7f1c804fb000-7f1c806fb000 ---p 00010000 08:04 7746204                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnipostproc.so
+7f1c806fb000-7f1c806fc000 r--p 00010000 08:04 7746204                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnipostproc.so
+7f1c806fc000-7f1c806fd000 rw-p 00011000 08:04 7746204                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjnipostproc.so
+7f1c806fd000-7f1c80718000 r-xp 00000000 08:04 7746202                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libpostproc.so.55
+7f1c80718000-7f1c80917000 ---p 0001b000 08:04 7746202                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libpostproc.so.55
+7f1c80917000-7f1c80918000 r--p 0001a000 08:04 7746202                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libpostproc.so.55
+7f1c80918000-7f1c80919000 rw-p 0001b000 08:04 7746202                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libpostproc.so.55
+7f1c80919000-7f1c80931000 r-xp 00000000 08:04 7746201                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniswscale.so
+7f1c80931000-7f1c80b31000 ---p 00018000 08:04 7746201                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniswscale.so
+7f1c80b31000-7f1c80b34000 r--p 00018000 08:04 7746201                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniswscale.so
+7f1c80b34000-7f1c80b35000 rw-p 0001b000 08:04 7746201                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniswscale.so
+7f1c80b35000-7f1c8101c000 r-xp 00000000 08:04 7746196                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavformat.so.58
+7f1c8101c000-7f1c8121c000 ---p 004e7000 08:04 7746196                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavformat.so.58
+7f1c8121c000-7f1c81267000 r--p 004e7000 08:04 7746196                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavformat.so.58
+7f1c81267000-7f1c81284000 rw-p 00532000 08:04 7746196                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavformat.so.58
+7f1c81284000-7f1c81288000 rw-p 00000000 00:00 0 
+7f1c81288000-7f1c83474000 r-xp 00000000 08:04 7746193                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavcodec.so.58
+7f1c83474000-7f1c83673000 ---p 021ec000 08:04 7746193                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavcodec.so.58
+7f1c83673000-7f1c836b6000 r--p 021eb000 08:04 7746193                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavcodec.so.58
+7f1c836b6000-7f1c836ea000 rw-p 0222e000 08:04 7746193                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavcodec.so.58
+7f1c836ea000-7f1c84000000 rw-p 00000000 00:00 0 
+7f1c84000000-7f1c84021000 rw-p 00000000 00:00 0 
+7f1c84021000-7f1c88000000 ---p 00000000 00:00 0 
+7f1c88000000-7f1c8802a000 rw-p 00000000 00:00 0 
+7f1c8802a000-7f1c8c000000 ---p 00000000 00:00 0 
+7f1c8c000000-7f1c8c021000 rw-p 00000000 00:00 0 
+7f1c8c021000-7f1c90000000 ---p 00000000 00:00 0 
+7f1c90010000-7f1c90013000 ---p 00000000 00:00 0 
+7f1c90013000-7f1c90111000 rw-p 00000000 00:00 0 
+7f1c90111000-7f1c90192000 r-xp 00000000 08:04 7746199                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libswscale.so.5
+7f1c90192000-7f1c90392000 ---p 00081000 08:04 7746199                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libswscale.so.5
+7f1c90392000-7f1c90393000 r--p 00081000 08:04 7746199                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libswscale.so.5
+7f1c90393000-7f1c90394000 rw-p 00082000 08:04 7746199                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libswscale.so.5
+7f1c90394000-7f1c9039c000 rw-p 00000000 00:00 0 
+7f1c9039c000-7f1c90462000 r-xp 00000000 08:04 7746198                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavformat.so
+7f1c90462000-7f1c90662000 ---p 000c6000 08:04 7746198                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavformat.so
+7f1c90662000-7f1c906e3000 r--p 000c6000 08:04 7746198                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavformat.so
+7f1c906e3000-7f1c906e4000 rw-p 00147000 08:04 7746198                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavformat.so
+7f1c906e4000-7f1c906e5000 rw-p 00000000 00:00 0 
+7f1c906e5000-7f1c90814000 r-xp 00000000 08:04 7746195                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavcodec.so
+7f1c90814000-7f1c90a13000 ---p 0012f000 08:04 7746195                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavcodec.so
+7f1c90a13000-7f1c90b4a000 r--p 0012e000 08:04 7746195                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavcodec.so
+7f1c90b4a000-7f1c90b4b000 rw-p 00265000 08:04 7746195                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavcodec.so
+7f1c90b4b000-7f1c90b5c000 r-xp 00000000 08:04 7746192                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniswresample.so
+7f1c90b5c000-7f1c90d5c000 ---p 00011000 08:04 7746192                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniswresample.so
+7f1c90d5c000-7f1c90d5d000 r--p 00011000 08:04 7746192                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniswresample.so
+7f1c90d5d000-7f1c90d5e000 rw-p 00012000 08:04 7746192                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniswresample.so
+7f1c90d5e000-7f1c90d78000 r-xp 00000000 08:04 7746190                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libswresample.so.3
+7f1c90d78000-7f1c90f78000 ---p 0001a000 08:04 7746190                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libswresample.so.3
+7f1c90f78000-7f1c90f7a000 r--p 0001a000 08:04 7746190                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libswresample.so.3
+7f1c90f7a000-7f1c90f7b000 rw-p 0001c000 08:04 7746190                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libswresample.so.3
+7f1c90f7b000-7f1c90f7e000 ---p 00000000 00:00 0 
+7f1c90f7e000-7f1c9107c000 rw-p 00000000 00:00 0 
+7f1c9107c000-7f1c911ee000 r-xp 00000000 08:03 2765767                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f1c911ee000-7f1c913ee000 ---p 00172000 08:03 2765767                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f1c913ee000-7f1c913f8000 r--p 00172000 08:03 2765767                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f1c913f8000-7f1c913fa000 rw-p 0017c000 08:03 2765767                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f1c913fa000-7f1c913fd000 rw-p 00000000 00:00 0 
+7f1c913fd000-7f1c914a5000 r-xp 00000000 08:04 7746189                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavutil.so
+7f1c914a5000-7f1c916a5000 ---p 000a8000 08:04 7746189                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavutil.so
+7f1c916a5000-7f1c916e0000 r--p 000a8000 08:04 7746189                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavutil.so
+7f1c916e0000-7f1c916e1000 rw-p 000e3000 08:04 7746189                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libjniavutil.so
+7f1c916e1000-7f1c916e2000 rw-p 00000000 00:00 0 
+7f1c916e2000-7f1c916f3000 r-xp 00000000 08:04 8126749                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libnio.so
+7f1c916f3000-7f1c918f2000 ---p 00011000 08:04 8126749                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libnio.so
+7f1c918f2000-7f1c918f3000 r--p 00010000 08:04 8126749                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libnio.so
+7f1c918f3000-7f1c918f4000 rw-p 00011000 08:04 8126749                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libnio.so
+7f1c918f4000-7f1c91951000 r-xp 00000000 08:04 7746187                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavutil.so.56
+7f1c91951000-7f1c91b50000 ---p 0005d000 08:04 7746187                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavutil.so.56
+7f1c91b50000-7f1c91b5b000 r--p 0005c000 08:04 7746187                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavutil.so.56
+7f1c91b5b000-7f1c91b5c000 rw-p 00067000 08:04 7746187                    /home/cjx913/.javacpp/cache/ffmpeg-4.1-1.4.4-linux-x86_64.jar/org/bytedeco/javacpp/linux-x86_64/libavutil.so.56
+7f1c91b5c000-7f1c91b6b000 rw-p 00000000 00:00 0 
+7f1c91b6b000-7f1c91b6e000 ---p 00000000 00:00 0 
+7f1c91b6e000-7f1c91c6c000 rw-p 00000000 00:00 0 
+7f1c91c6c000-7f1c91c71000 r-xp 00000000 08:03 2764498                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f1c91c71000-7f1c91e70000 ---p 00005000 08:03 2764498                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f1c91e70000-7f1c91e71000 r--p 00004000 08:03 2764498                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f1c91e71000-7f1c91e72000 rw-p 00005000 08:03 2764498                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f1c91e72000-7f1c91e7b000 r-xp 00000000 08:03 2764490                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f1c91e7b000-7f1c9207a000 ---p 00009000 08:03 2764490                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f1c9207a000-7f1c9207b000 r--p 00008000 08:03 2764490                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f1c9207b000-7f1c9207c000 rw-p 00009000 08:03 2764490                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f1c9207c000-7f1c9207f000 ---p 00000000 00:00 0 
+7f1c9207f000-7f1c9217d000 rw-p 00000000 00:00 0 
+7f1c9217d000-7f1c92194000 r-xp 00000000 08:03 659026                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f1c92194000-7f1c92393000 ---p 00017000 08:03 659026                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f1c92393000-7f1c92394000 r--p 00016000 08:03 659026                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f1c92394000-7f1c92395000 rw-p 00017000 08:03 659026                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f1c923b2000-7f1c923b7000 r--s 000a0000 08:04 7999636                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jsse.jar
+7f1c923b7000-7f1c92414000 r-xp 00000000 08:04 8126726                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libfontmanager.so
+7f1c92414000-7f1c92614000 ---p 0005d000 08:04 8126726                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libfontmanager.so
+7f1c92614000-7f1c92617000 r--p 0005d000 08:04 8126726                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libfontmanager.so
+7f1c92617000-7f1c92618000 rw-p 00060000 08:04 8126726                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libfontmanager.so
+7f1c92618000-7f1c9261f000 r--s 00000000 08:03 2883924                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f1c9261f000-7f1c92634000 r-xp 00000000 08:03 658983                     /lib/x86_64-linux-gnu/libbsd.so.0.9.1
+7f1c92634000-7f1c92833000 ---p 00015000 08:03 658983                     /lib/x86_64-linux-gnu/libbsd.so.0.9.1
+7f1c92833000-7f1c92834000 r--p 00014000 08:03 658983                     /lib/x86_64-linux-gnu/libbsd.so.0.9.1
+7f1c92834000-7f1c92835000 rw-p 00015000 08:03 658983                     /lib/x86_64-linux-gnu/libbsd.so.0.9.1
+7f1c92835000-7f1c92836000 rw-p 00000000 00:00 0 
+7f1c92836000-7f1c9283b000 r-xp 00000000 08:03 2764494                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f1c9283b000-7f1c92a3a000 ---p 00005000 08:03 2764494                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f1c92a3a000-7f1c92a3b000 r--p 00004000 08:03 2764494                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f1c92a3b000-7f1c92a3c000 rw-p 00005000 08:03 2764494                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f1c92a3c000-7f1c92a3e000 r-xp 00000000 08:03 2764483                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f1c92a3e000-7f1c92c3e000 ---p 00002000 08:03 2764483                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f1c92c3e000-7f1c92c3f000 r--p 00002000 08:03 2764483                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f1c92c3f000-7f1c92c40000 rw-p 00003000 08:03 2764483                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f1c92c40000-7f1c92c67000 r-xp 00000000 08:03 2765976                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f1c92c67000-7f1c92e66000 ---p 00027000 08:03 2765976                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f1c92e66000-7f1c92e67000 r--p 00026000 08:03 2765976                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f1c92e67000-7f1c92e68000 rw-p 00027000 08:03 2765976                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f1c92e68000-7f1c92e77000 r-xp 00000000 08:03 2764504                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1c92e77000-7f1c93076000 ---p 0000f000 08:03 2764504                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1c93076000-7f1c93077000 r--p 0000e000 08:03 2764504                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1c93077000-7f1c93078000 rw-p 0000f000 08:03 2764504                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f1c93078000-7f1c9307d000 r-xp 00000000 08:03 2764522                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f1c9307d000-7f1c9327c000 ---p 00005000 08:03 2764522                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f1c9327c000-7f1c9327d000 r--p 00004000 08:03 2764522                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f1c9327d000-7f1c9327e000 rw-p 00005000 08:03 2764522                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f1c9327e000-7f1c93287000 r-xp 00000000 08:03 2764516                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f1c93287000-7f1c93486000 ---p 00009000 08:03 2764516                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f1c93486000-7f1c93487000 r--p 00008000 08:03 2764516                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f1c93487000-7f1c93488000 rw-p 00009000 08:03 2764516                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f1c93488000-7f1c935c0000 r-xp 00000000 08:03 2764479                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1c935c0000-7f1c937c0000 ---p 00138000 08:03 2764479                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1c937c0000-7f1c937c1000 r--p 00138000 08:03 2764479                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1c937c1000-7f1c937c6000 rw-p 00139000 08:03 2764479                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f1c937c6000-7f1c937d7000 r-xp 00000000 08:03 2764496                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f1c937d7000-7f1c939d6000 ---p 00011000 08:03 2764496                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f1c939d6000-7f1c939d7000 r--p 00010000 08:03 2764496                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f1c939d7000-7f1c939d8000 rw-p 00011000 08:03 2764496                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f1c939d8000-7f1c93a2b000 r-xp 00000000 08:04 8126753                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libawt_xawt.so
+7f1c93a2b000-7f1c93c2a000 ---p 00053000 08:04 8126753                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libawt_xawt.so
+7f1c93c2a000-7f1c93c2b000 r--p 00052000 08:04 8126753                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libawt_xawt.so
+7f1c93c2b000-7f1c93c2e000 rw-p 00053000 08:04 8126753                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libawt_xawt.so
+7f1c93c2e000-7f1c93c2f000 rw-p 00000000 00:00 0 
+7f1c93c2f000-7f1c93cce000 r-xp 00000000 08:04 8126739                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libawt.so
+7f1c93cce000-7f1c93ece000 ---p 0009f000 08:04 8126739                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libawt.so
+7f1c93ece000-7f1c93ecf000 r--p 0009f000 08:04 8126739                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libawt.so
+7f1c93ecf000-7f1c93eda000 rw-p 000a0000 08:04 8126739                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libawt.so
+7f1c93eda000-7f1c93eff000 rw-p 00000000 00:00 0 
+7f1c93eff000-7f1c93f00000 ---p 00000000 00:00 0 
+7f1c93f00000-7f1c94000000 rw-p 00000000 00:00 0 
+7f1c94000000-7f1c94558000 rw-p 00000000 00:00 0 
+7f1c94558000-7f1c98000000 ---p 00000000 00:00 0 
+7f1c98000000-7f1c98021000 rw-p 00000000 00:00 0 
+7f1c98021000-7f1c9c000000 ---p 00000000 00:00 0 
+7f1c9c000000-7f1c9c6e3000 rw-p 00000000 00:00 0 
+7f1c9c6e3000-7f1ca0000000 ---p 00000000 00:00 0 
+7f1ca0000000-7f1ca03d1000 rw-p 00000000 00:00 0 
+7f1ca03d1000-7f1ca4000000 ---p 00000000 00:00 0 
+7f1ca4000000-7f1ca4021000 rw-p 00000000 00:00 0 
+7f1ca4021000-7f1ca8000000 ---p 00000000 00:00 0 
+7f1ca8000000-7f1ca8043000 rw-p 00000000 00:00 0 
+7f1ca8043000-7f1cac000000 ---p 00000000 00:00 0 
+7f1cac000000-7f1cac021000 rw-p 00000000 00:00 0 
+7f1cac021000-7f1cb0000000 ---p 00000000 00:00 0 
+7f1cb0000000-7f1cb0021000 rw-p 00000000 00:00 0 
+7f1cb0021000-7f1cb4000000 ---p 00000000 00:00 0 
+7f1cb4000000-7f1cb4021000 rw-p 00000000 00:00 0 
+7f1cb4021000-7f1cb8000000 ---p 00000000 00:00 0 
+7f1cb8000000-7f1cb8021000 rw-p 00000000 00:00 0 
+7f1cb8021000-7f1cbc000000 ---p 00000000 00:00 0 
+7f1cbc002000-7f1cbc024000 r--p 00000000 08:03 795578                     /usr/share/locale/zh_CN/LC_MESSAGES/libc.mo
+7f1cbc024000-7f1cbc029000 r--s 002f9000 08:04 7999626                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/charsets.jar
+7f1cbc029000-7f1cbc02c000 ---p 00000000 00:00 0 
+7f1cbc02c000-7f1cbf12b000 rw-p 00000000 00:00 0 
+7f1cbf12b000-7f1cbf141000 r-xp 00000000 08:04 8126746                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libnet.so
+7f1cbf141000-7f1cbf340000 ---p 00016000 08:04 8126746                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libnet.so
+7f1cbf340000-7f1cbf341000 r--p 00015000 08:04 8126746                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libnet.so
+7f1cbf341000-7f1cbf342000 rw-p 00016000 08:04 8126746                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libnet.so
+7f1cbf342000-7f1cbf343000 ---p 00000000 00:00 0 
+7f1cbf343000-7f1cbf346000 ---p 00000000 00:00 0 
+7f1cbf346000-7f1cbf443000 rw-p 00000000 00:00 0 
+7f1cbf443000-7f1cbf444000 ---p 00000000 00:00 0 
+7f1cbf444000-7f1cbf447000 ---p 00000000 00:00 0 
+7f1cbf447000-7f1cbf544000 rw-p 00000000 00:00 0 
+7f1cbf544000-7f1cbf545000 ---p 00000000 00:00 0 
+7f1cbf545000-7f1cbf548000 ---p 00000000 00:00 0 
+7f1cbf548000-7f1cbf645000 rw-p 00000000 00:00 0 
+7f1cbf645000-7f1cbf648000 ---p 00000000 00:00 0 
+7f1cbf648000-7f1cbf746000 rw-p 00000000 00:00 0 
+7f1cbf746000-7f1cbf748000 r--s 0001a000 08:04 7344386                    /home/cjx913/Application/idea/idea-IU-182.4892.20/lib/idea_rt.jar
+7f1cbf748000-7f1cbf75f000 r--s 0018d000 08:04 7735386                    /home/cjx913/.m2/repository/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar
+7f1cbf75f000-7f1cbf760000 r--s 00174000 08:04 4605395                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-windows-x86_64.jar
+7f1cbf760000-7f1cbf761000 r--s 0017b000 08:04 4605394                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-windows-x86.jar
+7f1cbf761000-7f1cbf762000 r--s 00188000 08:04 4605392                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-macosx-x86_64.jar
+7f1cbf762000-7f1cbf763000 r--s 001b3000 08:04 4605389                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-linux-ppc64le.jar
+7f1cbf763000-7f1cbf764000 r--s 00164000 08:04 4605388                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-linux-armhf.jar
+7f1cbf764000-7f1cbf765000 r--s 00199000 08:04 4605385                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-linux-x86_64.jar
+7f1cbf765000-7f1cbf766000 r--s 001b3000 08:04 4605384                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-linux-x86.jar
+7f1cbf766000-7f1cbf767000 r--s 00215000 08:04 4605381                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-android-x86_64.jar
+7f1cbf767000-7f1cbf768000 r--s 0021e000 08:04 4605379                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-android-x86.jar
+7f1cbf768000-7f1cbf769000 r--s 001dd000 08:04 4605377                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-android-arm64.jar
+7f1cbf769000-7f1cbf76b000 r--s 001cb000 08:04 4605375                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4-android-arm.jar
+7f1cbf76b000-7f1cbf76c000 r--s 00000000 08:04 8931761                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract-platform/4.0.0-1.4.4/tesseract-platform-4.0.0-1.4.4.jar
+7f1cbf76c000-7f1cbf770000 r--s 00338000 08:04 4476591                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-windows-x86_64.jar
+7f1cbf770000-7f1cbf773000 r--s 0033b000 08:04 4476588                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-windows-x86.jar
+7f1cbf773000-7f1cbf776000 r--s 002af000 08:04 4476587                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-macosx-x86_64.jar
+7f1cbf776000-7f1cbf779000 r--s 0027a000 08:04 4476584                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-linux-ppc64le.jar
+7f1cbf779000-7f1cbf77c000 r--s 0024c000 08:04 4476583                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-linux-armhf.jar
+7f1cbf77c000-7f1cbf77f000 r--s 002b3000 08:04 4476580                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-linux-x86_64.jar
+7f1cbf77f000-7f1cbf782000 r--s 00298000 08:04 4476579                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-linux-x86.jar
+7f1cbf782000-7f1cbf785000 r--s 002f6000 08:04 4476576                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-android-x86_64.jar
+7f1cbf785000-7f1cbf788000 r--s 00304000 08:04 4476574                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-android-x86.jar
+7f1cbf788000-7f1cbf78b000 r--s 0029b000 08:04 4476572                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-android-arm64.jar
+7f1cbf78b000-7f1cbf78e000 r--s 0028f000 08:04 4476570                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4-android-arm.jar
+7f1cbf78e000-7f1cbf78f000 r--s 00000000 08:04 8931767                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica-platform/1.77.0-1.4.4/leptonica-platform-1.77.0-1.4.4.jar
+7f1cbf78f000-7f1cbf791000 r--s 0000a000 08:04 4344100                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-windows-x86_64.jar
+7f1cbf791000-7f1cbf792000 r--s 00008000 08:04 4344097                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-windows-x86.jar
+7f1cbf792000-7f1cbf793000 r--s 0000b000 08:04 4344096                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-macosx-x86_64.jar
+7f1cbf793000-7f1cbf794000 r--s 0000c000 08:04 4344094                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-linux-ppc64le.jar
+7f1cbf794000-7f1cbf795000 r--s 00009000 08:04 4344091                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-linux-armhf.jar
+7f1cbf795000-7f1cbf796000 r--s 0000b000 08:04 4344089                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-linux-x86_64.jar
+7f1cbf796000-7f1cbf797000 r--s 0000c000 08:04 4344087                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-linux-x86.jar
+7f1cbf797000-7f1cbf798000 r--s 0000c000 08:04 4344085                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-android-x86_64.jar
+7f1cbf798000-7f1cbf799000 r--s 0000c000 08:04 4344083                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-android-x86.jar
+7f1cbf799000-7f1cbf79a000 r--s 0000a000 08:04 4344080                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-android-arm64.jar
+7f1cbf79a000-7f1cbf79b000 r--s 0000a000 08:04 4344078                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4-android-arm.jar
+7f1cbf79b000-7f1cbf79c000 r--s 00000000 08:04 8931760                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark-platform/1.07-1.4.4/flandmark-platform-1.07-1.4.4.jar
+7f1cbf79c000-7f1cbf79e000 r--s 00027000 08:04 4079558                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-windows-x86_64.jar
+7f1cbf79e000-7f1cbf79f000 r--s 0001f000 08:04 4079557                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-windows-x86.jar
+7f1cbf79f000-7f1cbf7a0000 r--s 0002c000 08:04 4079554                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-macosx-x86_64.jar
+7f1cbf7a0000-7f1cbf7a1000 r--s 00030000 08:04 4079552                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-linux-ppc64le.jar
+7f1cbf7a1000-7f1cbf7a2000 r--s 00024000 08:04 4079550                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-linux-armhf.jar
+7f1cbf7a2000-7f1cbf7a3000 r--s 00032000 08:04 4079548                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-linux-x86_64.jar
+7f1cbf7a3000-7f1cbf7a4000 r--s 00031000 08:04 4079546                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-linux-x86.jar
+7f1cbf7a4000-7f1cbf7a6000 r--s 00070000 08:04 4079544                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-android-x86_64.jar
+7f1cbf7a6000-7f1cbf7a7000 r--s 00072000 08:04 4079542                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-android-x86.jar
+7f1cbf7a7000-7f1cbf7a9000 r--s 00062000 08:04 4079539                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-android-arm64.jar
+7f1cbf7a9000-7f1cbf7aa000 r--s 00052000 08:04 4079537                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4-android-arm.jar
+7f1cbf7aa000-7f1cbf7ab000 r--s 00000000 08:04 8931758                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus-platform/2.3.1-1.4.4/artoolkitplus-platform-2.3.1-1.4.4.jar
+7f1cbf7ab000-7f1cbf7ac000 r--s 0001e000 08:04 3951315                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/videoinput/0.200-1.4.4/videoinput-0.200-1.4.4-windows-x86_64.jar
+7f1cbf7ac000-7f1cbf7ad000 r--s 00019000 08:04 3951312                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/videoinput/0.200-1.4.4/videoinput-0.200-1.4.4-windows-x86.jar
+7f1cbf7ad000-7f1cbf7ae000 r--s 00000000 08:04 8931756                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/videoinput-platform/0.200-1.4.4/videoinput-platform-0.200-1.4.4.jar
+7f1cbf7ae000-7f1cbf7b1000 r--s 00192000 08:04 3816486                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/librealsense/1.12.1-1.4.4/librealsense-1.12.1-1.4.4-windows-x86_64.jar
+7f1cbf7b1000-7f1cbf7b3000 r--s 00168000 08:04 3816501                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/librealsense/1.12.1-1.4.4/librealsense-1.12.1-1.4.4-windows-x86.jar
+7f1cbf7b3000-7f1cbf7b4000 r--s 0007c000 08:04 3816499                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/librealsense/1.12.1-1.4.4/librealsense-1.12.1-1.4.4-macosx-x86_64.jar
+7f1cbf7b4000-7f1cbf7b5000 r--s 0008a000 08:04 3816497                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/librealsense/1.12.1-1.4.4/librealsense-1.12.1-1.4.4-linux-x86_64.jar
+7f1cbf7b5000-7f1cbf7b6000 r--s 00093000 08:04 3816483                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/librealsense/1.12.1-1.4.4/librealsense-1.12.1-1.4.4-linux-x86.jar
+7f1cbf7b6000-7f1cbf7b7000 r--s 00000000 08:04 8931754                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/librealsense-platform/1.12.1-1.4.4/librealsense-platform-1.12.1-1.4.4.jar
+7f1cbf7b7000-7f1cbf7b9000 r--s 0019e000 08:04 935695                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect2/0.2.0-1.4.4/libfreenect2-0.2.0-1.4.4-windows-x86_64.jar
+7f1cbf7b9000-7f1cbf7bb000 r--s 0005b000 08:04 935693                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect2/0.2.0-1.4.4/libfreenect2-0.2.0-1.4.4-macosx-x86_64.jar
+7f1cbf7bb000-7f1cbf7bc000 r--s 00097000 08:04 935691                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect2/0.2.0-1.4.4/libfreenect2-0.2.0-1.4.4-linux-x86_64.jar
+7f1cbf7bc000-7f1cbf7be000 r--s 00093000 08:04 935689                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect2/0.2.0-1.4.4/libfreenect2-0.2.0-1.4.4-linux-x86.jar
+7f1cbf7be000-7f1cbf7bf000 r--s 00000000 08:04 8931752                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect2-platform/0.2.0-1.4.4/libfreenect2-platform-0.2.0-1.4.4.jar
+7f1cbf7bf000-7f1cbf7c1000 r--s 00033000 08:04 800020                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.4.4/libfreenect-0.5.3-1.4.4-windows-x86_64.jar
+7f1cbf7c1000-7f1cbf7c2000 r--s 0002b000 08:04 800017                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.4.4/libfreenect-0.5.3-1.4.4-windows-x86.jar
+7f1cbf7c2000-7f1cbf7c3000 r--s 0001a000 08:04 800016                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.4.4/libfreenect-0.5.3-1.4.4-macosx-x86_64.jar
+7f1cbf7c3000-7f1cbf7c5000 r--s 00037000 08:04 800015                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.4.4/libfreenect-0.5.3-1.4.4-linux-ppc64le.jar
+7f1cbf7c5000-7f1cbf7c6000 r--s 0001b000 08:04 800012                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.4.4/libfreenect-0.5.3-1.4.4-linux-armhf.jar
+7f1cbf7c6000-7f1cbf7c7000 r--s 00037000 08:04 800009                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.4.4/libfreenect-0.5.3-1.4.4-linux-x86_64.jar
+7f1cbf7c7000-7f1cbf7c8000 r--s 00036000 08:04 800007                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.4.4/libfreenect-0.5.3-1.4.4-linux-x86.jar
+7f1cbf7c8000-7f1cbf7c9000 r--s 00000000 08:04 8931750                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect-platform/0.5.3-1.4.4/libfreenect-platform-0.5.3-1.4.4.jar
+7f1cbf7c9000-7f1cbf7ca000 r--s 00050000 08:04 543991                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.5-1.4.4/libdc1394-2.2.5-1.4.4-windows-x86_64.jar
+7f1cbf7ca000-7f1cbf7cc000 r--s 00044000 08:04 543986                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.5-1.4.4/libdc1394-2.2.5-1.4.4-windows-x86.jar
+7f1cbf7cc000-7f1cbf7cd000 r--s 0002e000 08:04 543985                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.5-1.4.4/libdc1394-2.2.5-1.4.4-macosx-x86_64.jar
+7f1cbf7cd000-7f1cbf7ce000 r--s 00026000 08:04 543984                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.5-1.4.4/libdc1394-2.2.5-1.4.4-linux-ppc64le.jar
+7f1cbf7ce000-7f1cbf7cf000 r--s 00021000 08:04 543981                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.5-1.4.4/libdc1394-2.2.5-1.4.4-linux-armhf.jar
+7f1cbf7cf000-7f1cbf7d0000 r--s 00027000 08:04 543978                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.5-1.4.4/libdc1394-2.2.5-1.4.4-linux-x86_64.jar
+7f1cbf7d0000-7f1cbf7d1000 r--s 00029000 08:04 543974                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.5-1.4.4/libdc1394-2.2.5-1.4.4-linux-x86.jar
+7f1cbf7d1000-7f1cbf7d2000 r--s 00000000 08:04 8931748                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394-platform/2.2.5-1.4.4/libdc1394-platform-2.2.5-1.4.4.jar
+7f1cbf7d2000-7f1cbf7d3000 r--s 00035000 08:04 9710018                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flycapture/2.13.3.31-1.4.4/flycapture-2.13.3.31-1.4.4-windows-x86_64.jar
+7f1cbf7d3000-7f1cbf7d5000 r--s 00028000 08:04 9710017                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flycapture/2.13.3.31-1.4.4/flycapture-2.13.3.31-1.4.4-windows-x86.jar
+7f1cbf7d5000-7f1cbf7d7000 r--s 00032000 08:04 9710014                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flycapture/2.13.3.31-1.4.4/flycapture-2.13.3.31-1.4.4-linux-armhf.jar
+7f1cbf7d7000-7f1cbf7d8000 r--s 00044000 08:04 9710012                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flycapture/2.13.3.31-1.4.4/flycapture-2.13.3.31-1.4.4-linux-x86_64.jar
+7f1cbf7d8000-7f1cbf7da000 r--s 00044000 08:04 9710010                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flycapture/2.13.3.31-1.4.4/flycapture-2.13.3.31-1.4.4-linux-x86.jar
+7f1cbf7da000-7f1cbf7db000 r--s 00000000 08:04 8931746                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flycapture-platform/2.13.3.31-1.4.4/flycapture-platform-2.13.3.31-1.4.4.jar
+7f1cbf7db000-7f1cbf7dd000 r--s 01143000 08:04 9451046                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-windows-x86_64.jar
+7f1cbf7dd000-7f1cbf7df000 r--s 00f89000 08:04 9451044                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-windows-x86.jar
+7f1cbf7df000-7f1cbf7e1000 r--s 00e97000 08:04 9451042                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-macosx-x86_64.jar
+7f1cbf7e1000-7f1cbf7e3000 r--s 010a7000 08:04 9451040                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-linux-ppc64le.jar
+7f1cbf7e3000-7f1cbf7e5000 r--s 00dbb000 08:04 9451038                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-linux-armhf.jar
+7f1cbf7e5000-7f1cbf7e6000 r--s 00f09000 08:04 9451036                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-linux-x86_64.jar
+7f1cbf7e6000-7f1cbf7e7000 r--s 00e9d000 08:04 9451034                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-linux-x86.jar
+7f1cbf7e7000-7f1cbf7e8000 r--s 00f44000 08:04 9451032                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-android-x86_64.jar
+7f1cbf7e8000-7f1cbf7e9000 r--s 00fb0000 08:04 9451030                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-android-x86.jar
+7f1cbf7e9000-7f1cbf7ea000 r--s 00e02000 08:04 9451028                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-android-arm64.jar
+7f1cbf7ea000-7f1cbf7eb000 r--s 00d74000 08:04 9451026                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4-android-arm.jar
+7f1cbf7eb000-7f1cbf7fb000 r--s 015b1000 08:04 9191290                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-windows-x86_64.jar
+7f1cbf7fb000-7f1cbf815000 r--s 01393000 08:04 9191286                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-macosx-x86_64.jar
+7f1cbf815000-7f1cbf82e000 r--s 013cb000 08:04 9191284                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-linux-ppc64le.jar
+7f1cbf82e000-7f1cbf847000 r--s 01232000 08:04 9191282                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-linux-armhf.jar
+7f1cbf847000-7f1cbf861000 r--s 01253000 08:04 9191280                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-linux-x86_64.jar
+7f1cbf861000-7f1cbf87a000 r--s 0129d000 08:04 9191278                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-linux-x86.jar
+7f1cbf87a000-7f1cbf893000 r--s 015bd000 08:04 9191277                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-ios-x86_64.jar
+7f1cbf893000-7f1cbf8ab000 r--s 013ac000 08:04 9191274                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-ios-arm64.jar
+7f1cbf8ab000-7f1cbf8ae000 ---p 00000000 00:00 0 
+7f1cbf8ae000-7f1cbf9ac000 rw-p 00000000 00:00 0 
+7f1cbf9ac000-7f1cbfcfd000 r--p 00000000 08:03 2757265                    /usr/lib/locale/locale-archive
+7f1cbfcfd000-7f1cbfd00000 ---p 00000000 00:00 0 
+7f1cbfd00000-7f1cbfdfe000 rw-p 00000000 00:00 0 
+7f1cbfdfe000-7f1cbfe01000 ---p 00000000 00:00 0 
+7f1cbfe01000-7f1cbfeff000 rw-p 00000000 00:00 0 
+7f1cbfeff000-7f1cbff00000 ---p 00000000 00:00 0 
+7f1cbff00000-7f1cc0000000 rw-p 00000000 00:00 0 
+7f1cc0000000-7f1cc0021000 rw-p 00000000 00:00 0 
+7f1cc0021000-7f1cc4000000 ---p 00000000 00:00 0 
+7f1cc4000000-7f1cc4021000 rw-p 00000000 00:00 0 
+7f1cc4021000-7f1cc8000000 ---p 00000000 00:00 0 
+7f1cc8000000-7f1cc8021000 rw-p 00000000 00:00 0 
+7f1cc8021000-7f1ccc000000 ---p 00000000 00:00 0 
+7f1ccc000000-7f1ccc00f000 r--s 01284000 08:04 9191288                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-windows-x86.jar
+7f1ccc00f000-7f1ccc01b000 r--s 012a4000 08:04 9191272                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-android-x86_64.jar
+7f1ccc01b000-7f1ccc027000 r--s 01278000 08:04 9191268                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-android-x86.jar
+7f1ccc027000-7f1ccc033000 r--s 0107c000 08:04 9191270                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-android-arm64.jar
+7f1ccc033000-7f1ccc040000 r--s 00f25000 08:04 9191266                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4-android-arm.jar
+7f1ccc040000-7f1ccc043000 r--s 00010000 08:04 4605368                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/tesseract/4.0.0-1.4.4/tesseract-4.0.0-1.4.4.jar
+7f1ccc043000-7f1ccc046000 r--s 00024000 08:04 4476547                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/leptonica/1.77.0-1.4.4/leptonica-1.77.0-1.4.4.jar
+7f1ccc046000-7f1cd1000000 rw-p 00000000 00:00 0 
+7f1cd1000000-7f1cd1490000 rwxp 00000000 00:00 0 
+7f1cd1490000-7f1ce0000000 ---p 00000000 00:00 0 
+7f1ce0000000-7f1ce0ce1000 rw-p 00000000 00:00 0 
+7f1ce0ce1000-7f1ce4000000 ---p 00000000 00:00 0 
+7f1ce4000000-7f1ce4001000 r--s 00000000 08:04 8931744                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg-platform/4.1-1.4.4/ffmpeg-platform-4.1-1.4.4.jar
+7f1ce4001000-7f1ce4002000 r--s 00000000 08:04 8931762                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv-platform/4.0.1-1.4.4/opencv-platform-4.0.1-1.4.4.jar
+7f1ce4002000-7f1ce4003000 r--s 00002000 08:04 4344073                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flandmark/1.07-1.4.4/flandmark-1.07-1.4.4.jar
+7f1ce4003000-7f1ce4004000 r--s 00005000 08:04 4079519                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/artoolkitplus/2.3.1-1.4.4/artoolkitplus-2.3.1-1.4.4.jar
+7f1ce4004000-7f1ce4006000 r--s 00003000 08:04 3951307                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/videoinput/0.200-1.4.4/videoinput-0.200-1.4.4.jar
+7f1ce4006000-7f1ce4009000 r--s 0000a000 08:04 3816470                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/librealsense/1.12.1-1.4.4/librealsense-1.12.1-1.4.4.jar
+7f1ce4009000-7f1ce400b000 r--s 00005000 08:04 935685                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect2/0.2.0-1.4.4/libfreenect2-0.2.0-1.4.4.jar
+7f1ce400b000-7f1ce400d000 r--s 00004000 08:04 799981                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libfreenect/0.5.3-1.4.4/libfreenect-0.5.3-1.4.4.jar
+7f1ce400d000-7f1ce400f000 r--s 00006000 08:04 543955                     /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/libdc1394/2.2.5-1.4.4/libdc1394-2.2.5-1.4.4.jar
+7f1ce400f000-7f1ce4012000 r--s 0001d000 08:04 9709975                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flycapture/2.13.3.31-1.4.4/flycapture-2.13.3.31-1.4.4.jar
+7f1ce4012000-7f1ce4019000 r--s 00036000 08:04 9451022                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4.jar
+7f1ce4019000-7f1ce4037000 r--s 00155000 08:04 9191263                    /home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4.jar
+7f1ce4037000-7f1ce403d000 r--s 00059000 08:04 8794260                    /home/cjx913/.m2/repository/org/bytedeco/javacpp/1.4.4/javacpp-1.4.4.jar
+7f1ce403d000-7f1ce4042000 r--s 0005f000 08:04 8665785                    /home/cjx913/.m2/repository/org/bytedeco/javacv/1.4.4/javacv-1.4.4.jar
+7f1ce4042000-7f1ce4043000 r--s 00000000 08:04 8143656                    /home/cjx913/.m2/repository/org/bytedeco/javacv-platform/1.4.4/javacv-platform-1.4.4.jar
+7f1ce4043000-7f1ce4056000 r--s 00345000 08:04 7999632                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/resources.jar
+7f1ce4056000-7f1ce4069000 r--s 000d6000 08:04 7999619                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/plugin.jar
+7f1ce4069000-7f1ce4084000 r--s 0020c000 08:04 7999606                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/deploy.jar
+7f1ce4084000-7f1ce4589000 rw-p 00000000 00:00 0 
+7f1ce4589000-7f1ce4763000 r--s 03d6c000 08:04 7999628                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/rt.jar
+7f1ce4763000-7f1ce4bb4000 rw-p 00000000 00:00 0 
+7f1ce4bb4000-7f1ce4bb5000 ---p 00000000 00:00 0 
+7f1ce4bb5000-7f1ce4cb5000 rw-p 00000000 00:00 0 
+7f1ce4cb5000-7f1ce4cb6000 ---p 00000000 00:00 0 
+7f1ce4cb6000-7f1ce4db6000 rw-p 00000000 00:00 0 
+7f1ce4db6000-7f1ce4db7000 ---p 00000000 00:00 0 
+7f1ce4db7000-7f1ce4eb7000 rw-p 00000000 00:00 0 
+7f1ce4eb7000-7f1ce4eb8000 ---p 00000000 00:00 0 
+7f1ce4eb8000-7f1ce4fd8000 rw-p 00000000 00:00 0 
+7f1ce4fd8000-7f1ce524a000 ---p 00000000 00:00 0 
+7f1ce524a000-7f1ce526a000 rw-p 00000000 00:00 0 
+7f1ce526a000-7f1ce54dc000 ---p 00000000 00:00 0 
+7f1ce54dc000-7f1ce55a3000 rw-p 00000000 00:00 0 
+7f1ce55a3000-7f1ce5625000 ---p 00000000 00:00 0 
+7f1ce5625000-7f1ce5639000 rw-p 00000000 00:00 0 
+7f1ce5639000-7f1ce59e6000 ---p 00000000 00:00 0 
+7f1ce59e6000-7f1ce5a00000 r-xp 00000000 08:04 8126742                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libzip.so
+7f1ce5a00000-7f1ce5c00000 ---p 0001a000 08:04 8126742                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libzip.so
+7f1ce5c00000-7f1ce5c01000 r--p 0001a000 08:04 8126742                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libzip.so
+7f1ce5c01000-7f1ce5c02000 rw-p 0001b000 08:04 8126742                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libzip.so
+7f1ce5c02000-7f1ce5c0d000 r-xp 00000000 08:03 659079                     /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f1ce5c0d000-7f1ce5e0c000 ---p 0000b000 08:03 659079                     /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f1ce5e0c000-7f1ce5e0d000 r--p 0000a000 08:03 659079                     /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f1ce5e0d000-7f1ce5e0e000 rw-p 0000b000 08:03 659079                     /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f1ce5e0e000-7f1ce5e14000 rw-p 00000000 00:00 0 
+7f1ce5e14000-7f1ce5e29000 r-xp 00000000 08:03 659073                     /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f1ce5e29000-7f1ce6028000 ---p 00015000 08:03 659073                     /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f1ce6028000-7f1ce6029000 r--p 00014000 08:03 659073                     /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f1ce6029000-7f1ce602a000 rw-p 00015000 08:03 659073                     /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f1ce602a000-7f1ce602c000 rw-p 00000000 00:00 0 
+7f1ce602c000-7f1ce6037000 r-xp 00000000 08:03 659083                     /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f1ce6037000-7f1ce6236000 ---p 0000b000 08:03 659083                     /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f1ce6236000-7f1ce6237000 r--p 0000a000 08:03 659083                     /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f1ce6237000-7f1ce6238000 rw-p 0000b000 08:03 659083                     /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f1ce6238000-7f1ce623f000 r-xp 00000000 08:03 659075                     /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f1ce623f000-7f1ce643e000 ---p 00007000 08:03 659075                     /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f1ce643e000-7f1ce643f000 r--p 00006000 08:03 659075                     /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f1ce643f000-7f1ce6440000 rw-p 00007000 08:03 659075                     /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f1ce6440000-7f1ce644a000 r-xp 00000000 08:04 8126751                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libinstrument.so
+7f1ce644a000-7f1ce6649000 ---p 0000a000 08:04 8126751                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libinstrument.so
+7f1ce6649000-7f1ce664a000 r--p 00009000 08:04 8126751                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libinstrument.so
+7f1ce664a000-7f1ce664b000 rw-p 0000a000 08:04 8126751                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libinstrument.so
+7f1ce664b000-7f1ce6678000 r-xp 00000000 08:04 8126736                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libjava.so
+7f1ce6678000-7f1ce6877000 ---p 0002d000 08:04 8126736                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libjava.so
+7f1ce6877000-7f1ce6878000 r--p 0002c000 08:04 8126736                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libjava.so
+7f1ce6878000-7f1ce687a000 rw-p 0002d000 08:04 8126736                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libjava.so
+7f1ce687a000-7f1ce6887000 r-xp 00000000 08:04 8126741                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libverify.so
+7f1ce6887000-7f1ce6a86000 ---p 0000d000 08:04 8126741                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libverify.so
+7f1ce6a86000-7f1ce6a88000 r--p 0000c000 08:04 8126741                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libverify.so
+7f1ce6a88000-7f1ce6a89000 rw-p 0000e000 08:04 8126741                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/libverify.so
+7f1ce6a89000-7f1ce6a90000 r-xp 00000000 08:03 659128                     /lib/x86_64-linux-gnu/librt-2.27.so
+7f1ce6a90000-7f1ce6c8f000 ---p 00007000 08:03 659128                     /lib/x86_64-linux-gnu/librt-2.27.so
+7f1ce6c8f000-7f1ce6c90000 r--p 00006000 08:03 659128                     /lib/x86_64-linux-gnu/librt-2.27.so
+7f1ce6c90000-7f1ce6c91000 rw-p 00007000 08:03 659128                     /lib/x86_64-linux-gnu/librt-2.27.so
+7f1ce6c91000-7f1ce6e23000 r-xp 00000000 08:03 659056                     /lib/x86_64-linux-gnu/libm-2.27.so
+7f1ce6e23000-7f1ce7022000 ---p 00192000 08:03 659056                     /lib/x86_64-linux-gnu/libm-2.27.so
+7f1ce7022000-7f1ce7023000 r--p 00191000 08:03 659056                     /lib/x86_64-linux-gnu/libm-2.27.so
+7f1ce7023000-7f1ce7024000 rw-p 00192000 08:03 659056                     /lib/x86_64-linux-gnu/libm-2.27.so
+7f1ce7024000-7f1ce7d06000 r-xp 00000000 08:04 8126718                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/server/libjvm.so
+7f1ce7d06000-7f1ce7f06000 ---p 00ce2000 08:04 8126718                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/server/libjvm.so
+7f1ce7f06000-7f1ce7f9c000 r--p 00ce2000 08:04 8126718                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/server/libjvm.so
+7f1ce7f9c000-7f1ce7fcd000 rw-p 00d78000 08:04 8126718                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/amd64/server/libjvm.so
+7f1ce7fcd000-7f1ce8008000 rw-p 00000000 00:00 0 
+7f1ce8008000-7f1ce81b9000 r-xp 00000000 08:03 658987                     /lib/x86_64-linux-gnu/libc-2.27.so
+7f1ce81b9000-7f1ce83b8000 ---p 001b1000 08:03 658987                     /lib/x86_64-linux-gnu/libc-2.27.so
+7f1ce83b8000-7f1ce83bc000 r--p 001b0000 08:03 658987                     /lib/x86_64-linux-gnu/libc-2.27.so
+7f1ce83bc000-7f1ce83be000 rw-p 001b4000 08:03 658987                     /lib/x86_64-linux-gnu/libc-2.27.so
+7f1ce83be000-7f1ce83c2000 rw-p 00000000 00:00 0 
+7f1ce83c2000-7f1ce83c5000 r-xp 00000000 08:03 659012                     /lib/x86_64-linux-gnu/libdl-2.27.so
+7f1ce83c5000-7f1ce85c4000 ---p 00003000 08:03 659012                     /lib/x86_64-linux-gnu/libdl-2.27.so
+7f1ce85c4000-7f1ce85c5000 r--p 00002000 08:03 659012                     /lib/x86_64-linux-gnu/libdl-2.27.so
+7f1ce85c5000-7f1ce85c6000 rw-p 00003000 08:03 659012                     /lib/x86_64-linux-gnu/libdl-2.27.so
+7f1ce85c6000-7f1ce85dd000 r-xp 00000000 08:04 7480183                    /home/cjx913/Application/java/jdk1.8.0_191/lib/amd64/jli/libjli.so
+7f1ce85dd000-7f1ce87dc000 ---p 00017000 08:04 7480183                    /home/cjx913/Application/java/jdk1.8.0_191/lib/amd64/jli/libjli.so
+7f1ce87dc000-7f1ce87dd000 r--p 00016000 08:04 7480183                    /home/cjx913/Application/java/jdk1.8.0_191/lib/amd64/jli/libjli.so
+7f1ce87dd000-7f1ce87de000 rw-p 00017000 08:04 7480183                    /home/cjx913/Application/java/jdk1.8.0_191/lib/amd64/jli/libjli.so
+7f1ce87de000-7f1ce87f7000 r-xp 00000000 08:03 659118                     /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f1ce87f7000-7f1ce89f6000 ---p 00019000 08:03 659118                     /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f1ce89f6000-7f1ce89f7000 r--p 00018000 08:03 659118                     /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f1ce89f7000-7f1ce89f8000 rw-p 00019000 08:03 659118                     /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f1ce89f8000-7f1ce89fc000 rw-p 00000000 00:00 0 
+7f1ce89fc000-7f1ce8a21000 r-xp 00000000 08:03 658959                     /lib/x86_64-linux-gnu/ld-2.27.so
+7f1ce8a21000-7f1ce8a26000 r--s 000a0000 08:04 7999636                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jsse.jar
+7f1ce8a26000-7f1ce8a28000 r--s 00007000 08:04 7999644                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jfxswt.jar
+7f1ce8a28000-7f1ce8af9000 rw-p 00000000 00:00 0 
+7f1ce8af9000-7f1ce8afa000 ---p 00000000 00:00 0 
+7f1ce8afa000-7f1ce8afd000 ---p 00000000 00:00 0 
+7f1ce8afd000-7f1ce8bfe000 rw-p 00000000 00:00 0 
+7f1ce8bfe000-7f1ce8bff000 r--s 00000000 08:04 7999612                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/management-agent.jar
+7f1ce8bff000-7f1ce8c04000 r--s 00084000 08:04 7999605                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jfr.jar
+7f1ce8c04000-7f1ce8c07000 r--s 0001a000 08:04 7999642                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jce.jar
+7f1ce8c07000-7f1ce8c11000 r--s 0006e000 08:04 7999615                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/javaws.jar
+7f1ce8c11000-7f1ce8c16000 r--s 002f9000 08:04 7999626                    /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/charsets.jar
+7f1ce8c16000-7f1ce8c1e000 rw-s 00000000 08:03 2490554                    /tmp/hsperfdata_cjx913/19413
+7f1ce8c1e000-7f1ce8c1f000 rw-p 00000000 00:00 0 
+7f1ce8c1f000-7f1ce8c20000 r--p 00000000 00:00 0 
+7f1ce8c20000-7f1ce8c21000 r--p 00024000 08:03 658959                     /lib/x86_64-linux-gnu/ld-2.27.so
+7f1ce8c21000-7f1ce8c22000 rw-p 00025000 08:03 658959                     /lib/x86_64-linux-gnu/ld-2.27.so
+7f1ce8c22000-7f1ce8c23000 rw-p 00000000 00:00 0 
+7ffd78b9f000-7ffd78bc4000 rw-p 00000000 00:00 0                          [stack]
+7ffd78bd0000-7ffd78bd3000 r--p 00000000 00:00 0                          [vvar]
+7ffd78bd3000-7ffd78bd5000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -javaagent:/home/cjx913/Application/idea/idea-IU-182.4892.20/lib/idea_rt.jar=34783:/home/cjx913/Application/idea/idea-IU-182.4892.20/bin -Dfile.encoding=UTF-8 -Dawt.useSystemAAFontSettings=gasp 
+java_command: com.efunds.atms.video_record.core.Demo
+java_class_path (initial): /home/cjx913/Application/java/jdk1.8.0_191/jre/lib/charsets.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/deploy.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/cldrdata.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/dnsns.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/jaccess.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/jfxrt.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/localedata.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/nashorn.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/sunec.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/sunjce_provider.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/sunpkcs11.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/ext/zipfs.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/javaws.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jce.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jfr.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jfxswt.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/jsse.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/management-agent.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/plugin.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/resources.jar:/home/cjx913/Application/java/jdk1.8.0_191/jre/lib/rt.jar:/home/cjx913/Documents/IdeaProjects/video_record/target/classes:/home/cjx913/.m2/repository/org/bytedeco/javacv-platform/1.4.4/javacv-platform-1.4.4.jar:/home/cjx913/.m2/repository/org/bytedeco/javacv/1.4.4/javacv-1.4.4.jar:/home/cjx913/.m2/repository/org/bytedeco/javacpp/1.4.4/javacpp-1.4.4.jar:/home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/opencv/4.0.1-1.4.4/opencv-4.0.1-1.4.4.jar:/home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/ffmpeg/4.1-1.4.4/ffmpeg-4.1-1.4.4.jar:/home/cjx913/.m2/repository/org/bytedeco/javacpp-presets/flycapture/2.13.3.31-1.4.4/flycapture-2.13.3.31-1.4.4.jar:/hom
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/cjx913/Application/java/jdk1.8.0_191
+JRE_HOME=/home/cjx913/Application/java/jdk1.8.0_191/jre
+_JAVA_OPTIONS=  -Dawt.useSystemAAFontSettings=gasp
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/sbin:/usr/sbin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaced60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaced60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x907ca0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x907b70], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: SIG_IGN, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGINT: [libjvm.so+0x908190], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x908190], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x908190], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Deepin
+DISTRIB_RELEASE="15.10.2"
+DISTRIB_DESCRIPTION="Deepin 15.10.2 "
+DISTRIB_CODENAME=stable
+
+uname:Linux 4.15.0-29deepin-generic #31 SMP Fri Jul 27 07:12:08 UTC 2018 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 31196, NOFILE 1048576, AS infinity
+load average:1.99 1.39 0.98
+
+/proc/meminfo:
+MemTotal:        8082240 kB
+MemFree:         1458284 kB
+MemAvailable:    4746516 kB
+Buffers:          175396 kB
+Cached:          3428592 kB
+SwapCached:            0 kB
+Active:          3923596 kB
+Inactive:        2340016 kB
+Active(anon):    2663452 kB
+Inactive(anon):   160252 kB
+Active(file):    1260144 kB
+Inactive(file):  2179764 kB
+Unevictable:          48 kB
+Mlocked:              48 kB
+SwapTotal:      16777212 kB
+SwapFree:       16777212 kB
+Dirty:              4296 kB
+Writeback:             0 kB
+AnonPages:       2660152 kB
+Mapped:           445572 kB
+Shmem:            163668 kB
+Slab:             228932 kB
+SReclaimable:     143180 kB
+SUnreclaim:        85752 kB
+KernelStack:        8944 kB
+PageTables:        35720 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    20818332 kB
+Committed_AS:    5771032 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      225152 kB
+DirectMap2M:     7028736 kB
+DirectMap1G:     2097152 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-3
+cpu_memory_nodes: 0
+active_processor_count: 4
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 2976059392
+memory_max_usage_in_bytes: 3093655552
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+stepping	: 4
+microcode	: 0x2a
+cpu MHz		: 2242.144
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4389.82
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+stepping	: 4
+microcode	: 0x2a
+cpu MHz		: 2377.226
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4389.82
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+stepping	: 4
+microcode	: 0x2a
+cpu MHz		: 2302.052
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4389.82
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 61
+model name	: Intel(R) Core(TM) i5-5200U CPU @ 2.20GHz
+stepping	: 4
+microcode	: 0x2a
+cpu MHz		: 2331.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 20
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap intel_pt xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 4389.82
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8082240k(1458284k free), swap 16777212k(16777212k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.191-b12) for linux-amd64 JRE (1.8.0_191-b12), built on Oct  6 2018 05:43:09 by "java_re" with gcc 7.3.0
+
+time: Sun Jul 21 11:36:09 2019
+elapsed time: 29 seconds (0d 0h 0m 29s)
+
